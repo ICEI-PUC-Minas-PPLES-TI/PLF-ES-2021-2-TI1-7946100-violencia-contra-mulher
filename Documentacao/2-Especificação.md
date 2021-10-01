@@ -10,7 +10,7 @@
 
 ### Persona 01: 
 
-<img src="persona1.jpg" alt="drawing" style="width:200px;"/>
+<img src="images/persona1.jpg" alt="drawing" style="width:200px;"/>
 Nome: Pamela
 Idade: 20 anos
 Hobby: Ler, ir ao cinema, sair com amigos
@@ -22,7 +22,7 @@ Como ela devemos tratá-la: Tratar com empatia e sempre escutar as suas dores po
 
 ### Persona 02: 
 
-<img src="persona2.jpg" alt="drawing" style="width:200px;"/>
+<img src="images/persona2.jpg" alt="drawing" style="width:200px;"/>
 Nome: Vera Lúcia
 Idade: 57 anos
 Hobby: Crochê, leitura
@@ -41,8 +41,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 |Usuária do sistema  | Uma forma de denunciar meu agressor com segurança.          | Para me protejer e fazer justiça.           |
-|Usuária do sistema       | Uma forma de denunciar meu agressor e conhecer outras vítimas de 
-agressão (como uma correte do bem)      |Para me protejer, fazer justiça e incentivar outras mulheres |
+|Usuária do sistema       | Uma forma de denunciar meu agressor e conhecer outras vítimas de agressão (como uma correte do bem) | Para me protejer, fazer justiça e incentivar outras mulheres |
 
 
 ## Requisitos
