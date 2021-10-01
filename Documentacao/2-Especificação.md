@@ -10,7 +10,7 @@
 
 ### Persona 01: 
 
-<img src="images/persona1.jpg" alt="drawing" style="width:200px;"/>
+<img src="images/persona1.jpeg" alt="drawing" style="width:200px;"/>
 Nome: Pamela
 Idade: 20 anos
 Hobby: Ler, ir ao cinema, sair com amigos
@@ -22,7 +22,7 @@ Como ela devemos tratá-la: Tratar com empatia e sempre escutar as suas dores po
 
 ### Persona 02: 
 
-<img src="images/persona2.jpg" alt="drawing" style="width:200px;"/>
+<img src="images/persona2.jpeg" alt="drawing" style="width:200px;"/>
 Nome: Vera Lúcia
 Idade: 57 anos
 Hobby: Crochê, leitura
