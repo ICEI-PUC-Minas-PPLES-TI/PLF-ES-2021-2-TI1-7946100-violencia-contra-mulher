@@ -10,7 +10,11 @@
 
 ## User Flow
 
-![Exemplo de UserFlow](images/userflow.jpg)
+###  Mobile
+
+![Mobile User Flow](images/mobileUserFlow1.png)
+![Mobile User Flow](images/mobileUserFlow2.png)
+![Mobile User Flow](images/mobileUserFlow3.png)
 
 > Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
 > mapear todo fluxo de telas do site ou app. Essa técnica funciona

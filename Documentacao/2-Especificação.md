@@ -8,27 +8,31 @@
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em
-se desenvolver profissionalmente através de um mestrado fora do país,
-pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está
-buscando uma agência que o ajude a encontrar universidades na Europa
-que aceitem alunos estrangeiros.
+### Persona 01: 
+
+<img src="images/persona1.jpeg" alt="drawing" style="width:200px;"/>
+Nome: Pamela
+Idade: 20 anos
+Hobby: Ler, ir ao cinema, sair com amigos
+Ocupação: Estagiária de veterinária
+Personalidade: Tímida, porém tem facilidade em fazer amizades e conversar bastante quando animada
+Objetos e lugares: Redes sociais, normalmente no celular quando está fora de casa, e no computador quando está em casa.
+Objetivos chaves: Ela sofre abuso de parentes de sua família e precisa de um serviço para ter maior facilidade para fazer denúncias e também de incentivo para realizar essas denúncias e se sentir segura. 
+Como ela devemos tratá-la: Tratar com empatia e sempre escutar as suas dores pois ela teve poucas oportunidades de conversar sobre o assunto
+
+### Persona 02: 
+
+<img src="images/persona2.jpeg" alt="drawing" style="width:200px;"/>
+Nome: Vera Lúcia
+Idade: 57 anos
+Hobby: Crochê, leitura
+Ocupação: Aposentada
+Personalidade: Extrovertida, fácil de conversar
+Objetos e lugares: Costuma utilizar bastante o celular e computador para ler notícias e conversar com amigos e parentes
+Objetivos chaves: Ela sofreu violência no passado quando não havia leis como a Maria da Penha, mas ela ainda tem traumas e medo do ex-marido
+Como ela devemos tratá-la: Tratar ela com empatia e paciência sempre escutando o que ela tem a dizer
 
 
-> Enumere e detalhe as personas da sua solução. Para
-> tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-> Lembre-se que você deve ser enumerar e descrever precisamente e
-> personalizada todos os clientes ideais que sua solução almeja.
 
 ## Histórias de Usuários
 
@@ -36,19 +40,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Usuária do sistema  | Uma forma de denunciar meu agressor com segurança.          | Para me protejer e fazer justiça.           |
+|Usuária do sistema       | Uma forma de denunciar meu agressor e conhecer outras vítimas de agressão (como uma correte do bem) | Para me protejer, fazer justiça e incentivar outras mulheres |
 
-> Apresente aqui as histórias de usuário que são relevantes para o
-> projeto de sua solução. As Histórias de Usuário consistem em uma
-> ferramenta poderosa para a compreensão e elicitação dos requisitos
-> funcionais e não funcionais da sua aplicação. Se possível, agrupe as
-> histórias de usuário por contexto, para facilitar consultas
-> recorrentes à essa parte do documento.
->
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 
 ## Requisitos
 
@@ -58,34 +52,31 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001|Permitir que o usuario cadastre contatos/amigos próximos:Tela de cadastro de contatos próximos à vítima que em caso de emergência serão acionados.  | ALTA | 
+|RF-002| Dispor de um botão para acionamento emergencial da polícia e amigos próximos que enviará automaticamente uma mensagem padrão de denúncia.   | ALTA |
+|RF-003| Permitir cadastro de usuários no aplicativo  | MÉDIA |
+|RF-004| Possuir um menu lateral com opções de navegação pelo sistema.  | MÉDIA |
+|RF-005| Conceber a função de denúncia completa, com descrição e arquivos.  | ALTA |
+|RF-006| Possuir botão de adicionar arquivos em "Denúncia completa" para que seja possível adicionar mais de um registros. | MÉDIA |
+|RF-007| O sistema deve criar um histórico de denúncias realizadas pelo usuario cadastrado  | MÉDIA |
+|RF-008| O sistema deve filtrar a data na tela de "Histórico de denúncias". | MÉDIA |
+|RF-009| O sistema deve ter um botão para adicionar relatos das usuárias do aplicativo  | ALTO |
+|RF-010| O sistema deve filtrar os relatos  | MÉDIA |
+|RF-011| O sistema deve ter um botão de voltar páginas  | ALTA |
 
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O sistema deve ser responsivo para rodar  dispositivos móveis | MÉDIA | 
+|RNF-002| Deve processar denuncias do usuário em no máximo 3s |  ALTA | 
+|RNF-003| O sistema tem um número máximo de 50 contatos para serem cadastrados|  ALTA | 
+|RNF-004| Para o sistema de denúncia rápida funcionar, o usuário deverá ter cadastrado os números | ALTA | 
+|RNF-005| Para acessar o  histórico de denuncias o usuario deverá se cadastrar no sistema | MÉDIA | 
+|RNF-006| O número de fotos na denuncia completa não poderá ultrapassar o número máximo de 6 fotos | MEDIA | 
+|RNF-007| Para poder deixar um relato o usuario deverá se cadastrar no sistema | MÉDIA | 
 
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> - [Requisitos Funcionais
->   (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na
->   plataforma (ex: cadastro de usuário).
->
-> - [Requisitos Não Funcionais
->   (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade,
->   desempenho, confiabilidade, segurança ou outro (ex: suporte a
->   dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
@@ -93,13 +84,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|01| Garantia de que o aplicativo seja discreto o bastante para o agressor não saber |
+|02| Utilizar tecnologias de desenvolvimento que permitem a acessibilidade do software.   |
+|03| Dificuldade da denúncia chegar à polícia   |
 
 
-> Enumere as restrições à sua solução. Lembre-se de que as restrições
-> geralmente limitam a solução candidata.
-> 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
