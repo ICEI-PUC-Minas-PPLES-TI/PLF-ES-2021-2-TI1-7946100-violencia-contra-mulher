@@ -16,25 +16,16 @@
 ![Mobile User Flow](images/mobileUserFlow2.png)
 ![Mobile User Flow](images/mobileUserFlow3.png)
 
+### Web
+
+![Web User Flow](images/webUserFlow.png)
+![Web User Flow](images/webUserFlow2.png)
+![Web User Flow](images/webUserFlow3.png)
+
 > Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
 > mapear todo fluxo de telas do site ou app. Essa técnica funciona
 > para alinhar os caminhos e as possíveis ações que o usuário pode
 > fazer junto com os membros de sua equipe.
->
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
 
 
-## Wireframes
-
-![Exemplo de Wireframe](images/wireframe-example.png)
-
-> São protótipos usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante do
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+> - [Apresentação do Protótipo feita através do Figma](https://www.figma.com/proto/DRne8pFlN4b5Oz9PW639nm/Violencia-contra-mulher?node-id=18%3A3851&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=18%3A3851&show-proto-sidebar=1)
