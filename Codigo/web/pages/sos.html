@@ -29,13 +29,24 @@
         <button onclick="openNav()" title="Abrir Menu" class="open-nav"><i class="fas fa-bars"></i></button>
         <h1>SOS Urgente</h1>
 
-        <div class="sos-button">
+        <div class="sos-button" onclick="openModal()">
             <a href="#">SOS</a>
         </div>
 
         <button onclick="goBack()" class="backward-button" title="Voltar"><i class="fas fa-arrow-left"></i></button>
     </div>
 
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+          <p>Seus contatos e a polícia foram acionados. Procure um local seguro.</p>
+
+          <span class="close" onclick="closeModal()">Ok</span>
+        </div>
+      
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="../js/sos.js"></script>
 </body>
 </html>

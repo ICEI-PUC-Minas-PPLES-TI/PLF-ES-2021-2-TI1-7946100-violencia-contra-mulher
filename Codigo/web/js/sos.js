@@ -9,3 +9,18 @@ function closeNav() {
 function goBack() {
     window.history.back();
 }
+
+function openModal() {
+    $("#modal").show();
+}
+
+function closeModal() {
+    $("#modal").hide();
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        $("#modal").hide();
+    }
+}
