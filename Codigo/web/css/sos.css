@@ -1,14 +1,17 @@
 #side-nav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+329.54deg, #D95353 0%, rgba(214, 21, 79, 0.97) 100%);
 }
 
 .sidenav .closebtn {
@@ -49,12 +52,81 @@ body {
     font-family: sans-serif;
 }
 
-.main > a {
+.main > .sos-button {
     background: linear-gradient(140.91deg, #FF0000 4.79%, #483A3A 90.74%);
-    text-transform: uppercase;
-    border-radius: 180px;
-    font-size: 44px;
-    padding: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 360px;
+    width: 320px;
+    height: 320px;
+    align-self: center;
+}
+
+.sos-button > a {
     color: #fff;
     text-decoration: none;
+    font-size: 50px;
+    font-family: Arial;
+}
+
+button.backward-button {
+    align-self: flex-end;
+    outline: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+button.open-nav {
+    align-self: flex-start;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+a.menu-button {
+    margin-top: 40px;
+    color: #fff;
+    text-decoration: none;
+    background: #BBB3C2;
+    padding: 18px;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Nunito";
+    width: 220px;
+    font-size: 13px;
+}
+
+a.closebtn {
+    align-self: flex-end;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    font-family: sans-serif;
+}
+
+a.menu-button:hover {
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 2px 12px #6a6464;
+    transition: 0.3s;
+}
+
+a.closebtn:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sos-button > a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main > .sos-button:hover {
+    box-shadow: 0 2px 20px;
+    cursor: pointer;
 }
