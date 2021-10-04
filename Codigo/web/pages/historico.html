@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de denúncias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/historico.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="side-nav">
+        <a href="javascript:void(0)" title="Fechar Menu" class="closebtn" onclick="closeNav()">x</a>
+        <a href="#" class="menu-button">Cadastro</a>
+        <a href="#" class="menu-button">Adicionar Amigos</a>
+        <a href="../pages/historico.html" class="menu-button">Histórico de denúncias</a>
+        <a href="../pages/sobre.html" class="menu-button">Sobre o APP</a>
+        <a href="../index.html" class="menu-button">Início</a>
+    </div>
+
+    <div class="main">
+        <button onclick="openNav()" title="Abrir Menu" class="open-nav"><i class="fas fa-bars"></i></button>
+
+        <h1>Histórico de denúncias</h1>
+        <br><br>
+
+        <select class="filter-options">
+            <option value="data">Filtrar por data</option>
+            <option value="desc">Filtrar por descrição</option>
+        </select>
+        <button class="search-button">buscar</button>
+
+        <h3>Suas denúncias</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th id="th-data">Data</th>
+                    <th id="th-desc">Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="td-data">00/00</td>
+                    <td id="td-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora soluta modi quia obcaecati provident quisquam placeat aspernatur labore, excepturi tenetur tempore. Blanditiis corrupti adipisci voluptatem ducimus praesentium aliquam, aut facilis!</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button onclick="goBack()" class="backward-button" title="Voltar"><i class="fas fa-arrow-left"></i></button>
+    </div>
+
+    <script src="../js/sos.js"></script>
+</body>
+</html>
