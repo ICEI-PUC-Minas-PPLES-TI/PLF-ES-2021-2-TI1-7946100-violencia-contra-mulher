@@ -1,0 +1,91 @@
+body {
+    background: linear-gradient(180deg, #FEC5C5 43.75%, rgba(240, 198, 198, 0) 100%), #FFFFFF;
+    background-attachment: fixed;
+}
+
+#side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+329.54deg, #D95353 0%, rgba(214, 21, 79, 0.97) 100%);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+button.open-nav {
+    align-self: flex-start;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Nunito";
+    padding: 50px;
+    font-weight: 650;
+}
+
+a.menu-button {
+    margin-top: 40px;
+    color: #fff;
+    text-decoration: none;
+    background: #BBB3C2;
+    padding: 18px;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Nunito";
+    width: 220px;
+    font-size: 13px;
+}
+
+a.menu-button:hover {
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 2px 12px #6a6464;
+    transition: 0.3s;
+}
+
+a.closebtn {
+    align-self: flex-end;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    font-family: sans-serif;
+}
+
+a.closebtn:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 425px) {
+    .main {
+        padding: 20px;
+    }
+}

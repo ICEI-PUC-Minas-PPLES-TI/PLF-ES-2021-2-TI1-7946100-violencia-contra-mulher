@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/sobre.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="side-nav">
+        <a href="javascript:void(0)" title="Fechar Menu" class="closebtn" onclick="closeNav()">x</a>
+        <a href="#" class="menu-button">Cadastro</a>
+        <a href="#" class="menu-button">Adicionar Amigos</a>
+        <a href="#" class="menu-button">Histórico de denúncias</a>
+        <a href="../pages/sobre.html" class="menu-button">Sobre o APP</a>
+        <a href="../index.html" class="menu-button">Início</a>
+    </div>
+
+    <div class="main">
+        <button onclick="openNav()" title="Abrir Menu" class="open-nav"><i class="fas fa-bars"></i></button>
+
+        <h1>{{App name}}</h1>
+        <br><br>
+
+        <p>O <del>nome do projeto</del> foi desenvolvido por uma equipe de universitários. O principal objetivo do
+            projeto é desenvolver uma pesquisa em torno do assunto: <strong>Violência contra as mulheres</strong>, logo
+            em seguida desenvolver uma possível solução ou melhora através de um sistema digital. O <del>nome do
+                projeto</del> foi desenvolvido utilizando o conceito do <em>Design Sprint</em>, no qual guia o projeto
+            de maneira inteligente e prática.</p>
+
+        <br><br>
+        <h2 id="alunos-integrantes-da-equipe">Alunos integrantes da equipe</h2>
+        <ul>
+            <li>Mayara Roque Rangel</li>
+            <li>Camila Mariana Silva</li>
+            <li>Samara Martins Ferreira</li>
+            <li>Bruno Gomes Ferreira</li>
+            <li>Marco Antônio Miranda Ferreira</li>
+            <li>Pedro Henrique Pessoa Cruz</li>
+        </ul>
+
+        <br><br>
+        <h2 id="instru-es-de-utiliza-o">Instruções de utilização</h2>
+        <br>
+        <hr>
+        <ol>
+            <li>
+                <p><b>Instalação</b></p>
+                <p>A instalação do projeto poderá ser feita através de todas as plataformas seguras de gerenciamento e
+                    downloads de aplicativos de seu dispositivo móvel. A versão WEB do projeto pode ser acessada através
+                    do link: <a href="#">link do projeto na versão web</a>.</p>
+            </li>
+            <li>
+                <p><b>Primeiro contato</b></p>
+                <p>Após efetuar a instalação do aplicativo você poderá criar ou acessar sua conta pessoal através da
+                    página de cadastro. O aplicativo disponibiliza telas práticas e intuitivas baseadas em experiências
+                    de usuários finais no desenvolvimento de seu protótipo. </p>
+            </li>
+            <li>
+                <p><b>Telas e páginas web</b></p>
+                <p>Navegando entre as telas e páginas do sistema, você será capaz de notar que existem múltiplas telas
+                    de proficiência no tema do aplicativo, sendo a principal a tela de denúncia rápida. A tela de
+                    denúncia rápida apresenta ao usuário um botão de <strong><em>SOS</em></strong> no qual aciona
+                    autoridades competentes e contatos previamente adicionados no aplicativo através da página:
+                    <strong><em>Contatos</em></strong>, para prestar o socorro e ajuda para a usuária do sistema.</p>
+            </li>
+            <li>
+                <p><b>Permissões</b></p>
+                <p>Devido a complexidade e utilidade do projeto, o sistema deverá ser capaz de acessar informações
+                    externas para concluir sua finalidade. A tabela abaixo fala sobre permissões comuns de aplicativos
+                    em relação a sua necessidade no <del>nome do projeto</del>.</p>
+            </li>
+        </ol>
+
+        <table class="table table-striped table-dark text-center">
+            <thead>
+                <tr>
+                    <th>Permissões</th>
+                    <th>Necessidade Final</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Acesso aos contatos</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Fazer e receber ligações</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Enviar e receber SMS</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Localização atual</td>
+                    <td>✔️</td>
+                </tr>
+                <tr>
+                    <td>Mídias pessoais</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td>Documentos pessoais</td>
+                    <td>❌</td>
+                </tr>
+                <tr>
+                    <td>Auto identificação</td>
+                    <td>❌</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="../js/sos.js"></script>
+</body>
+
+</html>
