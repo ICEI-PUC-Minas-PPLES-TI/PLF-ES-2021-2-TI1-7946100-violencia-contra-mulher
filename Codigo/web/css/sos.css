@@ -181,3 +181,10 @@ a.closebtn:hover {
     font-weight: bold;
     font-family: 'Nunito';
 }
+
+@media only screen and (max-width: 425px) { 
+    .main > .sos-button {
+        width: 200px;
+        height: 200px;
+    }
+}
