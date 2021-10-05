@@ -24,7 +24,85 @@
     </div>
 
     <div class="main">
-        
+        <button onclick="openNav()" title="Abrir Menu" class="open-nav"><i class="fas fa-bars"></i></button>
+
+        <div class="cadastro">
+            <h1 class="cad-title">Cadastro</h1>
+
+            <span class="name-span">
+                Nome:
+                <input type="text" name="" id="">
+            </span>
+    
+            <span class="tel-span">
+                Telefone:
+                <input type="tel">
+            </span>
+
+            <span class="cpf-span">
+                CPF:
+                <input type="text" name="" id="">
+            </span>
+
+            <div class="end">
+                <span class="end-span">
+                    Endereço:
+                    <input type="text" class="main-end">
+                </span>
+
+                <span class="end-span">
+                    Bairro:
+                    <input type="text" class="bair-end">
+                </span>
+
+                <div class="cid-uf">
+                    <span class="end-span">
+                        Cidade:
+                        <input type="text" class="cid-end">
+                    </span>
+    
+                    <span class="end-span">
+                        UF:
+                        <input type="text" class="uf-end">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="acesso">
+            <h2 class="ace-title">Acesso</h2>
+
+            <span class="log-span">
+                Login:
+                <input type="text" class="log-end">
+            </span>
+
+            <span class="log-span">
+                Senha:
+                <input type="text" class="senha-end">
+            </span>
+
+            <span class="log-span">
+                Confirmar Senha:
+                <input type="text" class="confsen-end">
+            </span>
+        </div>
+
+        <button class="btn-save" onclick="openModal()">
+            Salvar
+        </button>
+
+        <button onclick="goBack()" class="backward-button" title="Voltar"><i class="fas fa-arrow-left"></i></button>
+    </div>
+
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+          <p>Dados salvos com sucesso</p>
+
+          <span class="close" onclick="closeModal()">Ok</span>
+        </div>
+      
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
