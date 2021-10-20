@@ -7,13 +7,13 @@ body {
     background: linear-gradient(114.69deg, rgba(255, 250, 250, 0) 9.57%, #F4D5D5 85.14%);
 }
 
-.main-section > .main-text > h1 {
+.main-section>.main-text>h1 {
     font-family: 'Nunito', sans-serif;
     color: #AF2C2C;
     font-size: 40px;
 }
 
-.main-section > .main-text > h2 {
+.main-section>.main-text>h2 {
     font-family: 'Gurajada', sans-serif;
     font-size: 30px;
 }
@@ -35,11 +35,11 @@ img {
     height: 750px;
 }
 
-.footer-controls > h3 {
+.footer-controls>h3 {
     font-family: 'Pacifico', cursive;
 }
 
-.div-buttons > a {
+.div-buttons>a {
     color: #fff;
     background: #d95353;
     padding: 13px;
@@ -56,7 +56,7 @@ img {
     flex-direction: row;
 }
 
-.div-buttons > a:hover {
+.div-buttons>a:hover {
     color: #fff;
 }
 
