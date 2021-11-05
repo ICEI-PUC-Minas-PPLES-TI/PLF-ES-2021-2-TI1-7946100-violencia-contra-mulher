@@ -1,5 +1,8 @@
-//*=======================
-BODY & CONTAINER=========================*/ body {
+/*=======================
+BODY & CONTAINER
+=========================*/
+
+body {
     background: linear-gradient(180deg, #FEC5C5 43.75%, rgba(240, 198, 198, 0) 100%), #FFFFFF;
     background-attachment: fixed;
 }
