@@ -16,14 +16,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="init()">
     <div id="side-nav">
-        <a href="javascript:void(0)" title="Fechar Menu" class="closebtn" onclick="closeNav()">x</a>
+        <!-- Somente representativo, ainda teremos essa funcionalidade -->
+        <!-- <a href="javascript:void(0)" title="Fechar Menu" class="closebtn" onclick="closeNav()">x</a>
         <a href="../pages/cadastro.html" class="menu-button">Cadastro</a>
         <a href="../pages/amigos.html" class="menu-button">Adicionar Amigos</a>
         <a href="../pages/historico.html" class="menu-button">Histórico de denúncias</a>
         <a href="../pages/sobre.html" class="menu-button">Sobre o APP</a>
-        <a href="../index.html" class="menu-button">Início</a>
+        <a href="../index.html" class="menu-button">Início</a> -->
+    </div>
+    <div class="row">
+        <div id="msg" class="col-sm-10 offset-sm-1 ">
+            <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+        </div>
     </div>
 
     <div class="main">
@@ -35,65 +41,307 @@
             <div class="content">
                 <div class="title">Denuncia Completa</div>
                 <hr>
-                <form action="#">
+                <form id="denunciar" action="#">
                     <div class="user-details">
+                        <div class="input-box2">
+                            <label class="details2" for="inputId">Id</label>
+                            <input type="text" id="inputId" placeholder="" disabled>
+                        </div>
+
                         <div class="input-box">
-                            <span class="details">Nome</span>
-                            <input type="text" placeholder="Informe o seu nome completo" required>
+                            <label class="details" for="inputName">Nome (*)</label>
+                            <input type="text" id="inputName" placeholder="Informe o seu nome completo" required>
                         </div>
                         <div class="input-box">
-                            <span class="details">Telefone</span>
-                            <input type="text" placeholder="Informe um telefone para contato" required>
+                            <label class="details" for="inputTel">Telefone (*)</label>
+                            <input type="text" id="inputTel" placeholder="Informe um telefone para contato" required>
                         </div>
                         <div class="input-box">
-                            <span class="details">Telefone 2</span>
-                            <input type="text" placeholder="Mais um contato?" required>
+                            <label class="details" for="inputTel2">Telefone 2</label>
+                            <input type="text" id="inputTel2" placeholder="Mais um contato?">
                         </div>
                         <div class="input-box">
-                            <span class="details">Email</span>
-                            <input type="text" placeholder="Informe o seu e-mail" required>
+                            <label class="details" for="inputEmail">Email (*)</label>
+                            <input type="email" id="inputEmail" placeholder="Informe o seu e-mail" required>
                         </div>
                         <div class="input-box row">
                             <div class="col-sm-12 col-md-12">
-                                <span class="details">Cidade</span>
-                                <input type="text" placeholder="Informe a sua cidade" required>
+                                <label class="details" for="inputCity">Cidade (*)</label>
+                                <input type="text" id="inputCity" placeholder="Informe a sua cidade" required>
                             </div>
                         </div>
                         <div class="input-box row">
                             <div class="col-sm-12  col-md-12">
-                                <span class="details">Bairro</span>
-                                <input type="text" placeholder="Informe o seu  bairro" required>
+                                <label class="details" for="inputDistrict">Bairro (*)</label>
+                                <input type="text" id="inputDistrict" placeholder="Informe o seu  bairro" required>
                             </div>
                         </div>
                         <div class="input-box row">
                             <div class="col-sm-12  col-md-6">
-                                <span class="details">UF</span>
-                                <input type="text" placeholder="UF" required>
+                                <label for="inputUf" class="details">UF (*)</label>
+                                <select type="text" id="inputUf" placeholder="UF" required>
+                                    <option selected disabled value="">Escolha...</option>
+                                    <option> AC</option>
+                                    <option> AP</option>
+                                    <option> AM</option>
+                                    <option> BA</option>
+                                    <option> CE</option>
+                                    <option> DF</option>
+                                    <option> ES</option>
+                                    <option> GO</option>
+                                    <option> MA</option>
+                                    <option> MT</option>
+                                    <option> MS</option>
+                                    <option> MG</option>
+                                    <option> PA</option>
+                                    <option> PB</option>
+                                    <option> PR</option>
+                                    <option> PE</option>
+                                    <option> PI</option>
+                                    <option> RJ</option>
+                                    <option> RN</option>
+                                    <option> RS</option>
+                                    <option> RO</option>
+                                    <option> RR</option>
+                                    <option> SC</option>
+                                    <option> SP</option>
+                                    <option> SE</option>
+                                    <option> TO</option>
+                                </select>
                             </div>
                         </div>
                         <div class="input-box">
-                            <span class="details">Detalhes</span>
-                            <textarea id="subject" name="subject" placeholder="Faça uma descrição detalhada da denuncia"></textarea>
+                            <label class="details">Detalhes (*)</label>
+                            <textarea id="subject" name="subject" placeholder="Faça uma descrição detalhada da denuncia" required></textarea>
+                        </div>
+
+                    </div>
+                    <!-- Ao clicar no botão de selecionar a imagem, ativa a função que faz a preview da imagem e também converte ela para base64/dataURL -->
+                    <label for="formFile" class="details"><strong>Inserir prova (*)</strong></label>
+                    <p>Insira uma imagem como prova da denuncia</p>
+                    <input class="form-control" id="formFile" type="file" onchange="previewFile()" required><br>
+                    <img id="img_preview" src="" height="200" class="img_preview" alt="">
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <small>(*) Campos obrigatórios</small>
                         </div>
                     </div>
                     <hr>
 
-
-                    <div class="button-container">
-                        <button class="btn-save" onclick="openModal()">
-                            Enviar
-                        </button>
-
+                    <div class="form-group row">
+                        <div class="col-sm-12 buttons-container">
+                            <input type="button" class="btn btn-form " id="btnInsert" value="Inserir">
+                            <input type="button" class="btn btn-form" id="btnUpdate" value="Alterar">
+                            <input type="button" class="btn btn-form" id="btnDelete" value="Excluir">
+                            <input type="button" class="btn btn-form" id="btnClear" value="Limpar">
+                        </div>
                     </div>
+
 
                 </form>
             </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="grid-denuncias" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">Telefone2</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Cidade</th>
+                                <th scope="col">Bairro</th>
+                                <th scope="col">Uf</th>
+                                <th scope="col">Detalhes</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-denuncias">
+                            <tr>
+                                <td scope="row">1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
+    </div>
+
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+            <p>Dados salvos com sucesso</p>
+
+            <span class="close" onclick="closeModal()">Ok</span>
+        </div>
+
+    </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <script src="../js/cadastro.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="../js/denuncia.js"></script>
+    <script>
+        function exibeContatos() {
+            // Remove todas as linhas do corpo da tabela
+            $("#table-denuncias").html("");
+
+            // Popula a tabela com os registros do banco de dados
+            for (i = 0; i < db.data.length; i++) {
+                let denuncia = db.data[i];
+                $("#table-denuncias").append(`<tr><td scope="row">${denuncia.id}</td>
+                                                <td>${denuncia.nome}</td>
+                                                <td>${denuncia.telefone}</td>
+                                                <td>${denuncia.telefone2}</td>
+                                                <td>${denuncia.email}</td>
+                                                <td>${denuncia.cidade}</td>
+                                                <td>${denuncia.bairro}</td>
+                                                <td>${denuncia.uf}</td>
+                                                <td>${denuncia.detalhes}</td>
+                                            </tr>`);
+            }
+        }
+
+
+        function init() {
+            // Adiciona funções para tratar os eventos 
+            $("#btnInsert").click(function() {
+                // Verfica se o formulário está preenchido corretamente
+                if (!$('#denunciar')[0].checkValidity()) {
+                    displayMessage("Preencha o formulário de denuncia corretamente.");
+                    return;
+                }
+
+                // Obtem os valores dos campos do formulário
+                let campoNome = $("#inputName").val();
+                let campoTelefone = $("#inputTel").val();
+                let campoTelefone2 = $("#inputTel2").val();
+                let campoEmail = $('#inputEmail').val();
+                let campoCidade = $("#inputCity").val();
+                let campoBairro = $("#inputDistrict").val();
+                let campoUf = $('#inputUf').val();
+                let campoDetalhes = $('#subject').val();
+                let campoImg = $('#formFile').val();
+                let denuncia = {
+                    nome: campoNome,
+                    telefone: campoTelefone,
+                    telefone2: campoTelefone2,
+                    email: campoEmail,
+                    cidade: campoCidade,
+                    bairro: campoBairro,
+                    uf: campoUf,
+                    detalhes: campoDetalhes,
+                    img: campoImg,
+                };
+
+                insertDenuncia(denuncia);
+
+                // Reexibe os contatos
+                exibeContatos();
+
+                // Limpa o formulario
+                $("#denunciar")[0].reset();
+                $("img").hide();
+            });
+
+            // Intercepta o click do botão Alterar
+            $("#btnUpdate").click(function() {
+                // Obtem os valores dos campos do formulário
+                let campoId = $("#inputId").val();
+                if (campoId == "") {
+                    displayMessage("Selecione uma denuncia para que seja alterada.");
+                    return;
+                }
+                let campoNome = $("#inputName").val();
+                let campoTelefone = $("#inputTel").val();
+                let campoTelefone2 = $("#inputTel2").val();
+                let campoEmail = $('#inputEmail').val();
+                let campoCidade = $("#inputCity").val();
+                let campoBairro = $("#inputDistrict").val();
+                let campoUf = $('#inputUf').val();
+                let campoDetalhes = $('#subject').val();
+                let denuncia = {
+                    nome: campoNome,
+                    telefone: campoTelefone,
+                    telefone2: campoTelefone2,
+                    email: campoEmail,
+                    cidade: campoCidade,
+                    bairro: campoBairro,
+                    uf: campoUf,
+                    detalhes: campoDetalhes,
+                };
+
+                updateDenuncia(parseInt(campoId), denuncia);
+
+                // Reexibe os contatos
+                exibeContatos();
+
+                // Limpa o formulario
+                $("#denunciar")[0].reset();
+            });
+
+            // Intercepta o click do botão Excluir
+            $("#btnDelete").click(function() {
+                let campoId = $("#inputId").val();
+                if (campoId == "") {
+                    displayMessage("Selecione uma denuncia para ser excluída.");
+                    return;
+                }
+                deleteDenuncia(parseInt(campoId));
+
+                // Reexibe os contatos
+                exibeContatos();
+
+                // Limpa o formulario
+                $("#denunciar")[0].reset();
+                $('img')[0].reset();
+            });
+
+            // Intercepta o click do botão Listar Contatos
+            $("#btnClear").click(function() {
+                $("#denunciar")[0].reset();
+            });
+
+            // Oculta a mensagem de aviso após alguns segundos
+            $('#msg').bind("DOMSubtreeModified", function() {
+                window.setTimeout(function() {
+                    $(".alert").fadeTo(500, 0).slideUp(500, function() {
+                        $(this).remove();
+                    });
+                }, 5000);
+            });
+
+
+            // Preenche o formulário quando o usuario clicar em uma linha da tabela 
+            $("#grid-denuncias").on("click", "tr", function(e) {
+                let linhaDenuncia = this;
+                colunas = linhaDenuncia.querySelectorAll("td");
+
+                $("#inputId").val(colunas[0].innerText);
+                $("#inputName").val(colunas[1].innerText);
+                $("#inputTel").val(colunas[2].innerText);
+                $("#inputTel2").val(colunas[3].innerText);
+                $('#inputEmail').val(colunas[4].innerText);
+                $("#inputCity").val(colunas[5].innerText);
+                $("#inputDistrict").val(colunas[6].innerText);
+                $('#inputUf').val(colunas[7].innerText);
+                $('#subject').val(colunas[8].innerText);
+            });
+
+            exibeContatos();
+
+        }
+    </script>
 </body>
 
 </html>
