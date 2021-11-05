@@ -182,6 +182,32 @@ a.closebtn:hover {
     font-family: 'Nunito';
 }
 
+a.btncontatos {
+    margin-bottom: 3rem;
+    text-decoration: none;
+    color: #fff;
+    background: #c51d1d;
+    padding: 6px;
+    border-radius: 10px;
+    font-family: 'Nunito';
+    font-weight: 600;
+    text-align: center;
+    transition: 0.3s;
+}
+
+a.btncontatos:hover {
+    box-shadow: 1px 1px 1px black;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.sos-text {
+    margin-top: 3rem;
+    text-align: center;
+    font-family: 'Nunito';
+}
+
 @media only screen and (max-width: 425px) { 
     .main > .sos-button {
         width: 200px;
