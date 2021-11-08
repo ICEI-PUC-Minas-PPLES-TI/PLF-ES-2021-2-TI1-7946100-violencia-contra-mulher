@@ -1,0 +1,50 @@
+body {
+   margin-top: 10px;
+   padding-top: 2vw;
+}
+
+#title{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-style: italic;
+   font-weight: 10;
+   font-size: 40px;   
+   color: brown;
+   text-align: center;
+}
+
+#subtitle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 20;
+    font-size: 20px;   
+    color: rgb(8, 8, 1); 
+    text-align: center;   
+}
+#ContCad{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 20;
+    font-size: 25px;   
+    color: rgb(8, 8, 1); 
+    text-align: center;    
+}
+
+ span {
+    margin-top: 5px;
+    font-family: American classic;
+    align-items: center;
+    font-weight: 20;
+    font-size: 20px;   
+    color: rgb(44, 8, 8);    
+}
+
+small{
+    color: red;
+}
+
+#table-contatos{
+    cursor:pointer;
+}
+
+.btn-save{
+    
+}
+

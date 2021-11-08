@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Contatos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/contatos.css">
+    <link rel="stylesheet" href="../css/Generic.css">
+</head>
+
+<body onload="ListaContatos()">
+
+    <div class="container">
+        <div id="title">Lista de contatos</div>
+        <div class="row">
+            <div id="msg" class="col-sm-10 offset-sm-1 ">
+                <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="msg" class="col-sm-2 offset-sm-10 ">
+                <a href="Contatos.html"><input type="button" class="btn btn-danger" id="btnCadastro" value="Voltar ao cadastro"></a>
+            </div>
+        </div><br>
+
+        <form id="form-contato">
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <span for="inputNome">Nome</span>
+                    <input type="text" class="form-control" id="inputNome" name="filtro_nome" onchange="ListaContatos()"
+                        required placeholder="Informe o nome do contato">
+                </div>
+                <div class="col-sm-8">
+                    <span for="inputCategoria">Categoria</span>
+                    <select name="filtro_categoria" id="filtro_categoria" onchange="ListaContatos()"
+                        class="form-control">
+                        <option value="">Selecione a Categoria</option>
+                        <option value="amigos">Amigos</option>
+                        <option value="familia">Familia</option>
+                        <option value="trabalho">Trabalho</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="grid-contatos" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Apelido</th>
+                            <th scope="col">Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-contatos">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="../js/contatos.js"></script>
+    <script>
+        // função para listar na tabela os contatos que estão associados aos filtros 
+        function ListaContatos() {
+
+            // Obtem os dados informados pelo usuário nos filtros
+            let fc = document.getElementById('inputNome').value;
+            let fcg = document.getElementById('filtro_categoria').value;
+
+            // limpa a lista de contatos apresentados
+            $("#table-contatos").empty();
+
+            // Popula a tabela com os registros do banco de dados
+            for (let index = 0; index < db.data.length; index++) {
+                const contato = db.data[index];
+
+                // Verifica se os dados do contato batem com os filtros
+                if (((contato.nome == fc) || (fc == '')) &&
+                    ((contato.categoria == fcg) || (fcg == ''))) {
+
+                    // Inclui o contato na tabela    
+                    $("#table-contatos").append(`<tr onMouseOver="javascript:this.style.backgroundColor='#FA8072'"
+                                                     onMouseOut="javascript:this.style.backgroundColor=''"
+                                                     onClick="javascript:this.style.backgroundColor='#B22222'">
+                                                    <td scope="row">${contato.id}</td>
+                                                    <td>${contato.nome}</td>
+                                                    <td>${contato.telefone}</td>
+                                                    <td>${contato.apelido}</td>
+                                                    <td>${contato.categoria}</td>
+                                                </tr>`);
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
