@@ -1,0 +1,461 @@
+/*=======================
+BODY & CONTAINER
+=========================*/
+
+body {
+    background: linear-gradient(180deg, #FEC5C5 43.75%, rgba(240, 198, 198, 0) 100%), #FFFFFF;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+#page-map {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+    display: flex;
+}
+
+#page-map aside {
+    width: 400px;
+    background: linear-gradient(180deg, #FEC5C5 43.75%, rgba(240, 198, 198, 0) 100%), #fae1e1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#page-map aside h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 42px;
+    margin-top: 5vh;
+}
+
+#page-map aside p {
+    line-height: 28px;
+    margin-top: 64px;
+}
+
+#page-map aside footer {
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+}
+
+#page-map aside footer strong {
+    font-weight: 800;
+}
+
+div.content {
+    margin: 0 auto;
+}
+
+#map {
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.marker {
+    background-image: url('../img/marker-map.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*=======================
+	FORM
+=========================*/
+
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+form .user-details .row {
+    width: calc(100% / 3 - 20px);
+}
+
+form .input-box label.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 20px;
+    padding-left: 15px;
+    background: #FFFFFF;
+    border: 1px solid #FF5151;
+    box-sizing: border-box;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 20px;
+    padding-left: 15px;
+    background: #FFFFFF;
+    border: 1px solid #FF5151;
+    box-sizing: border-box;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #e42121;
+}
+
+form .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .category label .dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two,
+#dot-3:checked~.category label .three {
+    background: #9b59b6;
+    border-color: #d9d9d9;
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+form .button {
+    height: 45px;
+    margin: 35px 0
+}
+
+form #subject {
+    height: 10vw;
+    margin: 5px 0;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    background: #FFFFFF;
+    border: 1px solid #FF5151;
+    box-sizing: border-box;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    min-width: 40vw;
+    max-width: 100vw;
+}
+
+.form-control {
+    max-width: 50vw;
+}
+
+.input-box2 {
+    display: none;
+}
+
+.details2 {
+    display: none;
+}
+
+.form-group .buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-group .buttons-container .btn-form {
+    margin-right: 5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vw;
+}
+
+#msg {
+    height: 60px;
+}
+
+
+/*=======================
+	MENU
+=========================*/
+
+
+/* Somente para fins representativos de onde ficará o menu de navegação  */
+
+#side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient( 329.54deg, #D95353 0%, rgba(214, 21, 79, 0.97) 100%);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+button.open-nav {
+    align-self: flex-start;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+a.menu-button {
+    margin-top: 40px;
+    color: #fff;
+    text-decoration: none;
+    background: #BBB3C2;
+    padding: 18px;
+    border-radius: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Nunito";
+    width: 220px;
+    font-size: 13px;
+}
+
+a.menu-button:hover {
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 2px 12px #6a6464;
+    transition: 0.3s;
+}
+
+a.closebtn {
+    align-self: flex-end;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    font-family: sans-serif;
+}
+
+a.closebtn:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*=======================
+	BUTTONS
+=========================*/
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form-group .btn-form {
+    align-self: flex-end;
+    border: none;
+    background: #970D0D;
+    color: #fff;
+    width: 100px;
+    padding: 5px;
+    border-radius: 120px;
+    cursor: pointer;
+}
+
+.form-group .btn-form:hover {
+    align-self: flex-end;
+    border: none;
+    background: #f84a58;
+    color: #fff;
+    width: 100px;
+    padding: 5px;
+    border-radius: 120px;
+    cursor: pointer;
+}
+
+
+/*=======================
+MEDIA QUERIES
+=========================*/
+
+@media screen and (max-width: 800px) {
+    #page-map {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #page-map aside {
+        min-width: 100vw;
+        top: 0;
+        height: 30vh;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #page-map aside h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    #page-map aside .open-nav {
+        width: 5rem;
+    }
+    #page-map aside p {
+        display: none;
+    }
+    #page-map aside footer {
+        display: none;
+    }
+    .sidebar a {
+        float: left;
+    }
+    div.content {
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #page-map aside h2 {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media(max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+    .container .content .title {
+        margin-left: 5px;
+    }
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    form .user-details .input-box input {
+        margin-bottom: 15px;
+        min-width: 81vw;
+    }
+    form .category {
+        width: 100%;
+    }
+    .content form .user-details {
+        max-height: 270vh;
+    }
+    .user-details::-webkit-scrollbar {
+        width: 5px;
+    }
+    form #subject {
+        height: 40vw;
+        min-width: 81vw;
+    }
+}
+
+@media only screen and (max-width: 602px) {
+    input {
+        width: auto !important;
+    }
+    label.end-label>input {
+        margin-left: 0;
+    }
+    input.uf-end {
+        margin-top: 20px;
+    }
+    form .user-details .row {
+        width: calc(100% - 20px);
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    table tbody {
+        display: table;
+        width: 100%;
+    }
+    #msg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 380px) {}
+
+@media(max-width: 459px) {
+    .container {
+        margin-top: 30px;
+    }
+    .container .content .category {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1998px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    table tbody {
+        display: table;
+        width: 100%;
+    }
+    th,
+    td {
+        min-width: 250px;
+    }
+}
