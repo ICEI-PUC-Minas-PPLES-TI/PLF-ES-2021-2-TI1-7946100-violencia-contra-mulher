@@ -100,6 +100,17 @@ const geojson = {
                 description: ' Descrição: fornecem atendimento das 8:00 às 18:00'
             }
         },
+        {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-43.9371, -19.9249]
+            },
+            properties: {
+                title: ' COMSIV',
+                description: ' Descrição: A Coordenadoria da Mulher em Situação de Violência Doméstica e Familiar são órgãos permanentes onde uma de suas atribuições são: garantir o aprimoramento da estrutura do Judiciário na política de enfrentamento da violência contra as mulheres, auxiliar na formação continuada e especializada dos magistrados e servidores nesta matéria e recepcionar, no âmbito de cada Estado.'
+            }
+        }
 
 
     ]
