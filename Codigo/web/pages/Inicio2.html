@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Inicio2" content="width=device-width, initial-scale=0.9">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fome de hamburguer</title>
+  <link rel="stylesheet" href="../css/inicio2.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="imagex/png" href="../img/icon2.png">
+  <script src="../js/inicio.js"></script>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <nav>
+      <input type="checkbox" id="menu-moble">
+      <label for="menu-moble" id="label-menu">
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-times-circle"></i>
+      </label>
+      <ul class="Menu">
+        <li><a href="#">Promoções</a></li>
+        <li><a href="#">Mais vendidos</a></li>
+        <li><a href="#">Novidades</a></li>
+        <li><a href="#">Endereço</a></li>
+        <li><a href="#">Sobre</a></li>
+      </ul>
+    </nav>
+    <div class="input-group pesquisa">
+      <input type="search" class="form-control rounded" placeholder="Pesquisa" aria-label="Pesquisar"
+          aria-describedby="search-addon" />
+      <button type="button" class="btn btn-outline-dark">Pesquisa</button>
+  </div>
+  </header>
+
+  <div class="ajuda">
+    <button type="button" class="btn btn-dark" id="butAjuda" onclick="criar()">
+    <img class="imghelp" src="../img/help.png" height="30px" width="30px">  Ajuda
+    </button>
+
+  </div>
+
+  <section class="container">
+    <form id="formMaq">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../img/pnl1.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../img/pnl2.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../img/pnl3.png" alt="Third slide">
+          </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+        <section class="py-5 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-10 col-md-8 mx-auto">
+              <h1 class="fw-light">Fome de hamburguer</h1>
+              <p class="lead text-muted">Aqui você pode adiquirir os melhores produtos do 
+                mercado e ter acesso a novidades e promoções. Navegue e descubra. 
+                Caso esteja perdido clique em "Pesquisar" no canto superior direito da tela. 
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <h2 id='rel'></h2>
+
+        <div class="album py-5 bg-light">
+
+          <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="card-img-top" src="../img/ham1.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">PROMOÇÃO: 2 sanduiches por R$ 11,90</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="card-img-top" src="../img/ham2.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">MegaBuguer: pão, carne artersanal, bacon e salada.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="card-img-top" src="../img/ham3.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">BuguerWiki: pão, carne artersanal, bacon, salada, queijo e palmito.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="card-img-top" src="../img/ham4.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">SimpleBurguer: duplo pão, carne artersanal, salada e queijo.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      <div class="album py-5 bg-light">
+
+        <div class="container">
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham5.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">BuguerMax: pão, carne artersanal, bacon, salada (acompanhado de batatas).</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham6.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">BuguerX: combo composto por 1 BuguerMax, 1 refrigerante e batatas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham7.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">BuguerZ: pão, carne artersanal, bacon, salada, molho especial, queijo e requeijão.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham8.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">BuguerDuplo: combo composto por 2 hamburgues a gosto.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="album py-5 bg-light">
+
+        <div class="container">
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham9.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">BuguerDobro: pão, carne artesanal dupla, queijo e molho especial.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham10.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">BuguerDobroX: combo composto por 2 BuguerDobro.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham11.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">MegaXBurguer: pão, carne, queijo, salada, requeijão, molho verde e molho especial.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham12.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">ArteBuguer: duplo pão, dupla carne, queijo, salada, requeijão, molho verde e molho especial </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+  <footer class="rodape">
+    <p>Copyright 2021- Modern shoe</p>
+  </footer>
+</body>
+
+</html>

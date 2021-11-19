@@ -4,7 +4,7 @@
 }
 
 .cabecalho{
-    background-color: rgb(172, 171, 171);
+    background-color: rgb(47, 39, 39);
     display: flex;
     flex-wrap: wrap; /* se não couber quebra linha*/
     justify-content: space-between;
@@ -30,7 +30,8 @@
 }
 
 .rodape p{
-    background-color: rgb(172, 171, 171);
+    background-color: rgb(47, 39, 39);
+    color: #fefefe;
     display: flex;
     flex-wrap: wrap; /* se não couber quebra linha*/
     justify-content: space-between;
@@ -61,7 +62,7 @@
     max-width: 1100px;
     align-items: center;
     width: 100%;
-    background-color: #fff;
+    background-color: rgb(139, 125, 125);
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
@@ -135,7 +136,7 @@
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #4b3838;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -148,7 +149,7 @@
 =========================*/
 
 body {
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(117, 97, 97);
     background-attachment: fixed;
 }
 
@@ -173,7 +174,7 @@ body {
 .container {
     max-width: 1100px;
     width: 100%;
-    background-color: #fff;
+    background-color: rgb(253, 253, 253);
     padding: 25px 30px;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
@@ -181,7 +182,7 @@ body {
 
 .ajuda{
     position: fixed;
-    left:30px ;
+    right: 10px ;
     margin-top: 400px;
     align-items: center;
     font-size: 70px;
@@ -189,7 +190,7 @@ body {
 }
 
 #butAjuda{
-    background-color: black;
+    background-color: rgb(51, 35, 35);
     border-radius: 30px;
     font-size: 20px;
 }
@@ -249,7 +250,7 @@ MEDIA QUERIES
         min-width: 81vw;
     }
     body{
-        background:#ffffff;
+        background:#4d4242;
     }
     .container{
         box-shadow:#ffffff;
@@ -270,7 +271,7 @@ MEDIA QUERIES
         width: calc(100% - 20px);
     }
     body{
-        background:#ffffff;
+        background:#4b3b3b;
     }
     .container{
         box-shadow:#ffffff;
@@ -286,7 +287,7 @@ MEDIA QUERIES
         flex-direction: column;
     }
     body{
-        background:#ffffff;
+        background:#473838;
     }
     .container{
         box-shadow:#ffffff;
