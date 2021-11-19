@@ -32,58 +32,7 @@ function processaForm(evt){
         }
         usuarios.push(usuario)
         localStorage.setItem("db_usuario", JSON.stringify(usuarios))
-        $("#table-contatos").html("");
-
-            // Popula a tabela com os registros do banco de dados
-            for (i = 0; i < db.data.length; i++) {
-                let contato = db.data[i];    
-                $("#table-contatos").append(`<tr><td scope="row">${contato.nome}</td>
-                                                <td>${contato.telefone}</td>
-                                                <td>${contato.cpf}</td>
-                                                <td>${contato.data}</td>
-                                                <td>${contato.rua}</td>
-                                                <td>${contato.bairro}</td>
-                                                <td>${contato.cidade}</td>
-                                                <td>${contato.comple}</td>
-                                                <td>${contato.id}</td>
-                                                
-                                            </tr>`);
-            }
-        }
-
-        function init() {
-            // Adiciona funções para tratar os eventos 
-            $("#btnInsert").click(function () {
-                // Verfica se o formulário está preenchido corretamente
-                if (!$('#form-contato')[0].checkValidity()) {
-                    displayMessage("Preencha o formulário corretamente.");
-                    return;
-                }
-
-                // Obtem os valores dos campos do formulário
-                let campoNome = $("#nome").val();
-                let campoTelefone = $("#telefone").val();
-                let campoCpf = $('#cpf').val();
-                let campoData = $("#data").val();
-                let campoRua = $('#rua').val();
-                let campoBairro= $('#bairro').val();
-                let campoCidade = $('#cidade').val();
-                let campoComple = $('#comple').val();
-                let contato = { nome: campoNome, 
-                    telefone: campoTelefone, 
-                    cpf: campoCpf, 
-                    data: campoData, 
-                    rua: campoRua,
-                    bairro: campoBairro,
-                    cidade: campoCidade,
-                    comple: campoComple };
-
-                insertContato(contato);
-
-                // Reexibe os contatos
-                exibeContatos();
-            })
-        }
+        
     }
 
  
