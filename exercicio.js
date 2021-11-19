@@ -32,6 +32,7 @@ function processaForm(evt){
         }
         usuarios.push(usuario)
         localStorage.setItem("db_usuario", JSON.stringify(usuarios))
+        window.alert("Dados enviados com sucesso!");
         
     }
 
