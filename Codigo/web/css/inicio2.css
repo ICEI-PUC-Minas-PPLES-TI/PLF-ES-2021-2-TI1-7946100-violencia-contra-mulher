@@ -194,6 +194,11 @@ body {
     border-radius: 30px;
     font-size: 20px;
 }
+#help{
+    font-size: 15px;
+    left: 0px;
+    color: #794747;
+}
 
 /*=======================
 	FORM

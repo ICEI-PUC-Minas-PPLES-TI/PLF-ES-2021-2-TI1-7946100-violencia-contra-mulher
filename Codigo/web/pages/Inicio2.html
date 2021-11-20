@@ -31,19 +31,53 @@
     </nav>
     <div class="input-group pesquisa">
       <input type="search" class="form-control rounded" placeholder="Pesquisa" aria-label="Pesquisar"
-          aria-describedby="search-addon" />
-      <button type="button" class="btn btn-outline-dark">Pesquisa</button>
-  </div>
+        aria-describedby="search-addon" />
+      <button type="button" class="btn btn-outline-dark" id="pesquisar" data-toggle="modal"
+        data-target="#exampleModalCenter">Pesquisa</button>
+    </div>
   </header>
 
   <div class="ajuda">
-    <button type="button" class="btn btn-dark" id="butAjuda" onclick="criar()">
-    <img class="imghelp" src="../img/help.png" height="30px" width="30px">  Ajuda
+    <button type="button" class="btn btn-dark" id="butAjuda">
+      <img class="imghelp" src="../img/help.png" height="30px" width="30px"> Ajuda
     </button>
 
   </div>
 
   <section class="container">
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Atenção</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Você será redirecionado para outra página. <br>
+            Informe a palavra-chave. <br><br>
+            <div class="alert alert-danger" role="alert" style='display: none;' id="alert">
+              Palavra-chave incorreta!
+            </div>
+            <input type="text" class="form-control" id="inputPalavraChave" name="entrada" autocomplete="false" required
+              placeholder="Informe a palavra chave"><br>
+          </div>
+          <div class="modal-footer">
+            <div class="" role="alert" id="help" style="display: block;">
+              *palavra-chave é um ato.
+            </div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary" id="confirma">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fim Modal -->
+
     <form id="formMaq">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -68,65 +102,65 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-        <section class="py-5 text-center container">
-          <div class="row py-lg-5">
-            <div class="col-lg-10 col-md-8 mx-auto">
-              <h1 class="fw-light">Fome de hamburguer</h1>
-              <p class="lead text-muted">Aqui você pode adiquirir os melhores produtos do 
-                mercado e ter acesso a novidades e promoções. Navegue e descubra. 
-                Caso esteja perdido clique em "Pesquisar" no canto superior direito da tela. 
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <h2 id='rel'></h2>
-
-        <div class="album py-5 bg-light">
-
-          <div class="container">
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img class="card-img-top" src="../img/ham1.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">PROMOÇÃO: 2 sanduiches por R$ 11,90</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img class="card-img-top" src="../img/ham2.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">MegaBuguer: pão, carne artersanal, bacon e salada.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img class="card-img-top" src="../img/ham3.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">BuguerWiki: pão, carne artersanal, bacon, salada, queijo e palmito.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img class="card-img-top" src="../img/ham4.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">SimpleBurguer: duplo pão, carne artersanal, salada e queijo.</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-10 col-md-8 mx-auto">
+            <h1 class="fw-light">Fome de hamburguer</h1>
+            <p class="lead text-muted">Aqui você pode adiquirir os melhores produtos do
+              mercado e ter acesso a novidades e promoções. Navegue e descubra.
+              Caso esteja perdido clique em "Pesquisar" no canto superior direito da tela.
+            </p>
           </div>
         </div>
+      </section>
+
+      <h2 id='rel'></h2>
+
+      <div class="album py-5 bg-light">
+
+        <div class="container">
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">PROMOÇÃO: 2 sanduiches por R$ 11,90</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham2.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">MegaBuguer: pão, carne artersanal, bacon e salada.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham3.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">BuguerWiki: pão, carne artersanal, bacon, salada, queijo e palmito.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-img-top" src="../img/ham4.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">SimpleBurguer: duplo pão, carne artersanal, salada e queijo.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
       <div class="album py-5 bg-light">
 
@@ -155,7 +189,8 @@
               <div class="card shadow-sm">
                 <img class="card-img-top" src="../img/ham7.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">BuguerZ: pão, carne artersanal, bacon, salada, molho especial, queijo e requeijão.</p>
+                  <p class="card-text">BuguerZ: pão, carne artersanal, bacon, salada, molho especial, queijo e
+                    requeijão.</p>
                 </div>
               </div>
             </div>
@@ -201,7 +236,8 @@
               <div class="card shadow-sm">
                 <img class="card-img-top" src="../img/ham11.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">MegaXBurguer: pão, carne, queijo, salada, requeijão, molho verde e molho especial.</p>
+                  <p class="card-text">MegaXBurguer: pão, carne, queijo, salada, requeijão, molho verde e molho
+                    especial.</p>
                 </div>
               </div>
             </div>
@@ -210,7 +246,8 @@
               <div class="card shadow-sm">
                 <img class="card-img-top" src="../img/ham12.jpg" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">ArteBuguer: duplo pão, dupla carne, queijo, salada, requeijão, molho verde e molho especial </p>
+                  <p class="card-text">ArteBuguer: duplo pão, dupla carne, queijo, salada, requeijão, molho verde e
+                    molho especial </p>
                 </div>
               </div>
             </div>
