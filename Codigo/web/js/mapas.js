@@ -17,7 +17,7 @@ const geojson = {
             },
             properties: {
                 title: 'Praça da Liberdade',
-                description: ' Descrição: Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam iure voluptate neque, blanditiis laudantium similique iusto! Exercitationem praesentium soluta eius. '
+                description: ' Descrição: Teste. '
             }
         }, {
             type: 'Feature',
