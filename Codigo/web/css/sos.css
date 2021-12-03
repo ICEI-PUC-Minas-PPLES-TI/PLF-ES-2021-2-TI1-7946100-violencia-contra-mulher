@@ -10,8 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(
-329.54deg, #D95353 0%, rgba(214, 21, 79, 0.97) 100%);
+    background: linear-gradient( 329.54deg, #D95353 0%, rgba(214, 21, 79, 0.97) 100%);
 }
 
 .sidenav .closebtn {
@@ -28,8 +27,12 @@
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
 body {
@@ -44,26 +47,26 @@ body {
     justify-content: center;
 }
 
-.main > h1 {
+.main>h1 {
     font-size: 50px;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     border-radius: 360px;
     color: #970D0D;
     font-family: sans-serif;
 }
 
-.main > .sos-button {
+.main>.sos-button {
     background: linear-gradient(140.91deg, #FF0000 4.79%, #483A3A 90.74%);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 360px;
-    width: 320px;
-    height: 320px;
+    width: 220px;
+    height: 220px;
     align-self: center;
 }
 
-.sos-button > a {
+.sos-button>a {
     color: #fff;
     text-decoration: none;
     font-size: 50px;
@@ -72,8 +75,11 @@ body {
 
 button.backward-button {
     align-self: flex-end;
+    margin-right: 1rem;
     outline: none;
     border: none;
+    background: rgba(230, 77, 77, 0.97);
+    border-radius: 5px;
     font-size: 32px;
     cursor: pointer;
 }
@@ -121,12 +127,12 @@ a.closebtn:hover {
     color: #fff;
 }
 
-.sos-button > a:hover {
+.sos-button>a:hover {
     text-decoration: none;
     color: #fff;
 }
 
-.main > .sos-button:hover {
+.main>.sos-button:hover {
     box-shadow: 0 2px 20px;
     cursor: pointer;
 }
@@ -135,26 +141,25 @@ a.closebtn:hover {
     display: none;
 }
 
-
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 450px !important;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 450px !important;
 }
 
 .close {
@@ -170,12 +175,12 @@ a.closebtn:hover {
 
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.modal-content > p {
+.modal-content>p {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
@@ -208,8 +213,8 @@ a.btncontatos:hover {
     font-family: 'Nunito';
 }
 
-@media only screen and (max-width: 425px) { 
-    .main > .sos-button {
+@media only screen and (max-width: 425px) {
+    .main>.sos-button {
         width: 200px;
         height: 200px;
     }
