@@ -1,0 +1,46 @@
+body {
+    background: linear-gradient(180deg, #FEC5C5 43.75%, rgba(240, 198, 198, 0) 100%), #FFFFFF;
+    background-attachment: fixed;
+    text-align: center;
+}
+header {
+    font-size:large;
+    padding: 2.5%;
+    background-color: rgb(245, 201, 201);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div{
+    background-color: white;
+    padding: 10px;
+    font-family: American classic;
+    font-size: large;
+}
+    
+section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+}
+a:link {
+    padding: 3%;
+    text-align: right;
+    color: #000;
+    text-decoration: none;
+}
+section {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+input {
+    border-radius: 20px;
+}
+h1 {
+    color: rgb(194, 74, 74);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container {
+    padding: 5%;
+    margin : 5%;
+}
+
