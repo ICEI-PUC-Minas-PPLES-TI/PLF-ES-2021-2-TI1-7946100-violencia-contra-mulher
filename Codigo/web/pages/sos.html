@@ -45,11 +45,14 @@
         <button onclick="goBack()" class="backward-button" title="Voltar"><i class="fas fa-arrow-circle-left"></i></i></button>
     </div>
 
-    <div id="modal" class="modal">
+    <div id="modal" class="modal" style="overflow-y: auto;">
 
         <div class="modal-content">
-            <p>Seus contatos e a polícia foram acionados. Procure um local seguro.</p>
-
+            <p style='color: #67bf70'>Seus contatos e a polícia foram acionados. Procure um local seguro.</p>
+            
+            <div id="modal-contacts">
+                <b>Contatos acionados: </b>
+            </div>
             <span class="close" onclick="closeModal()">Ok</span>
         </div>
 
