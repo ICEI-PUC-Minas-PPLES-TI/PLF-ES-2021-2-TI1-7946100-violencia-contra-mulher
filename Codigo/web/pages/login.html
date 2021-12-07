@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body>
     <header>
         VIOLÊNCIA CONTRA MULHER
-        <a href="cadas_usuario.html">Cadastro</a>
+        <a href="../pages/cadas_usuario.html">Cadastro</a>
         <a href="#">Adicionar amigos</a>
         <a href="#">Histórico de denuncias</a>
         <a href="#">Sobre</a>
     </header>
     <main>
         <div class="container">
-          <h1>LOGIN</h1>
-          <form id="login" onsubmit="return processaForm(event)">
-            <section id="id_cpf">CPF:
-                <input type="text" name="cpf" id="cpf" required>
-            </section>
-            <section id="id_senhas">senha:
-                <input type="password" name="senha" id="senha" required >
-            </section>
-            <section id="button">
-                <input type="submit" value="enviar">
-            </section>
-            <input type="button" value="Esqueceu sua senha?"onclick="esqueceu()">
+            <h1>LOGIN</h1>
+            <form id="login" onsubmit="return processaForm(event)">
+                <section id="id_cpf">CPF:
+                    <input type="text" name="cpf" id="cpf" required>
+                </section>
+                <section id="id_senhas">senha:
+                    <input type="password" name="senha" id="senha" required>
+                </section>
+                <section id="button">
+                    <input type="submit" value="enviar">
+                </section>
+                <input type="button" value="Esqueceu sua senha?" onclick="esqueceu()">
         </div>
     </main>
 </body>
-<script src="login.js"></script>
+<script src="../js/login.js"></script>
+
 </html>
