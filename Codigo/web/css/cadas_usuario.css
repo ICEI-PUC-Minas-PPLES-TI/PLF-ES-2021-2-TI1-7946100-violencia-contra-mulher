@@ -1,16 +1,59 @@
+/*=======================
+	MENU
+=========================*/
+
+/* Comportamento normal Desktop */
+
+.Menu a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.cabecalho{
+    background:linear-gradient(180deg, #f3c3c3, rgba(240, 128, 128, 0) 100%) #db6d6d 43.75%;
+    display: flex;
+    flex-wrap: wrap; /* se não couber quebra linha*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.Menu {
+    display: flex;
+}
+
+.Menu li {
+   margin: 10px;
+   list-style: none;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 18px; 
+}
+
+/* Menu moble */
+
+.input-group{
+    max-width: 200px;
+}
+
+#menu-moble{
+    display: none;
+    position: fixed;
+}
+
+#label-menu{
+    display: none;
+}
+
+/* Fim Menu moble */
+
 body {
     background: linear-gradient(180deg, #FEC5C5 43.75%, rgba(240, 198, 198, 0) 100%), #FFFFFF;
     background-attachment: fixed;
     text-align: center;
 }
-header {
-    font-size:large;
-    padding: 2.5%;
-    background-color: rgb(245, 201, 201);
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-div{
+form > div {
     background-color: white;
     padding: 10px;
     font-family: American classic;
@@ -22,7 +65,7 @@ section {
     margin-right: auto;
     width: 20em;
 }
-a:link {
+form > a:link {
     padding: 3%;
     text-align: right;
     color: #000;
@@ -38,5 +81,91 @@ input {
 h1 {
     color: rgb(194, 74, 74);
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Menu*/
+@media screen and (max-width: 768px) {
+
+    .cabecalho{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 999; /*sobrepor*/
+    }
+ 
+    .cabecalho nav{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+    }   
+ 
+    .Menu{
+     display: flex;
+     position: fixed;
+     flex-wrap: wrap;
+     align-content: center;
+     top: 0px;
+     left: 0px;
+     width: 100%;
+     height: 0%; /* altura 0 assuma a posição incial dele, 100% ocupa toda a página*/
+     background-color: rgba(0, 0, 0, 0.7);
+     overflow: hidden;
+     -webkit-transition: height 0.3s;
+     -moz-transition: height 0.3s;
+     -ms-transition: height 0.3s;
+     -o-transition: height 0.3s;
+     transition: height 0.3s;
+    }
+ 
+    .Menu li {
+     display: block;
+     width: 100%;
+     margin-left: 0px;
+     margin-bottom: 20px;
+     z-index: 999; /*sobrepor*/
+    }
+ 
+    .Menu li a {
+       display: block;
+       text-align: center;
+       width: 100%;
+       z-index: 999; /*sobrepor*/
+     }  
+
+     #buttonPesq{
+         display: none;
+     }
+     
+     #label-menu{
+         width: 50px;
+         height: inherit; /* sem comprimento definido */
+         display: block;
+         position: absolute;
+         top: 15px; /*mandando pro topo*/
+         right: 60px; /*mandando pra direira*/
+         line-height: 60px; /*largura da linha pra descer um pouco*/
+         color: white;
+         z-index: 999; /*sobrepor*/
+     }    
+ 
+     #menu-moble:checked ~ label i:nth-child(2) {
+         display: block;
+     }
+ 
+     #menu-moble:checked ~ label i:first-child {
+         display: none;
+     }
+ 
+     #menu-moble:not(:checked) ~ label i:first-child {
+         display: block;
+     }
+ 
+     #menu-moble:not(:checked) ~ label i:nth-child(2) {
+         display: none;
+     }    
+ 
+     #menu-moble:checked ~ ul {
+         height: 100%;
+     }
 }
 

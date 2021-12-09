@@ -6,12 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cadastro de Contatos</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel='stylesheet' href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/contatos.css">
   <link rel="stylesheet" href="../css/Generic.css">
 </head>
 
 <body onload="init()">
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+
+    <nav id="navbar_top">
+      <input type="checkbox" id="menu-moble">
+      <label for="menu-moble" id="label-menu">
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-times-circle"></i>
+      </label>
+      <ul class="Menu">
+        <li><a href="sos.html">Denúncia rápida</a></li>
+        <li><a href="denuncia.html">Denúncia completa</a></li>
+        <li><a href="cadas_usuario.html">Cadastro de usuários</a></li>
+        <li><a href="Contatos.html">Cadastro de contatos</a></li>
+        <li><a href="mapas.html">Mapa auxiliar</a></li>
+      </ul>
+    </nav>
+
+    <div class="input-group pesquisa">
+      <input type="search" class="form-control rounded" placeholder="Pesquisa" aria-label="Pesquisar"
+        aria-describedby="search-addon" />
+      <button type="button" class="btn btn-outline-dark" id="buttonPesq"
+        style="border-color: aliceblue; color: aliceblue;">Pesquisa</button>
+    </div>
+
+  </header>
 
   <div id="side-nav">
     <a href="javascript:void(0)" title="Fechar Menu" class="closebtn" onclick="closeNav()">x</a>
@@ -67,7 +97,8 @@
         </div>
       </form>
     </div>
-    <br><div id="ContCad">Contatos cadastrados</div><br>
+    <br>
+    <div id="ContCad">Contatos cadastrados</div><br>
     <div class="row">
 
       <div class="col-sm-12">
