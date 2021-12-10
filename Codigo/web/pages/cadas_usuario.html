@@ -137,24 +137,43 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="app.js"></script>
 <script>
+    function deleteContatoFromDb()
+    { 
+        let id = $("#inputId").val();
+        let usuarios = JSON.parse(localStorage.getItem("db_usuario"));
+
+        if(id) {
+            delete usuarios[id];
+
+            localStorage.setItem("db_usuario", JSON.stringify(usuarios));
+        } else {
+            alert("Selecione um usuario antes de remover.");
+        }
+    }
+
+
     exibeContatos()
     function exibeContatos() {
         // Remove todas as linhas do corpo da tabela
         $("#table-contatos").html("");
-        console.log('contato', usuarios)
-        // Popula a tabela com os registros do banco de dados
-        for (i = 0; i < usuarios.length; i++) {
-            let contato = usuarios[i];
-            $("#table-contatos").append(`<tr><td scope="row">${i}</td>
-                                                <td>${contato.nome}</td>
-                                                <td>${contato.tel}</td>
-                                                <td>${contato.cpf}</td>
-                                                <td>${contato.data}</td>
-                                                <td>${contato.rua}</td>
-                                                <td>${contato.bairro}</td>
-                                                <td>${contato.cidade}</td>
-                                                <td>${contato.comple}</td>
-                                            </tr>`);
+
+        let usuarios = JSON.parse(localStorage.getItem("db_usuario"));
+        // Popula a tabela com os registros do banco de dados   
+        
+        for(let i = 0; i <= (usuarios.length - 1); i++) {
+            if(usuarios[i]) {
+                $("#table-contatos").append(
+                `<tr><td scope="row">${i}</td>
+                    <td>${usuarios[i].nome}</td>
+                    <td>${usuarios[i].tel}</td>
+                    <td>${usuarios[i].cpf}</td>
+                    <td>${usuarios[i].data}</td>
+                    <td>${usuarios[i].rua}</td>
+                    <td>${usuarios[i].bairro}</td>
+                    <td>${usuarios[i].cidade}</td>
+                    <td>${usuarios[i].comple}</td>
+                </tr>`);
+            }
         }
     }
 
@@ -239,13 +258,15 @@
                 displayMessage("Selecione um contato a ser excluído.");
                 return;
             }
-            deleteContato(parseInt(campoId));
+            
+            // removo o contato
+            deleteContatoFromDb();
 
             // Reexibe os contatos
             exibeContatos();
 
             // Limpa o formulario
-            $("#form-contato")[0].reset();
+            // $("#form-contato")[0].reset();
         });
 
         // Intercepta o click do botão Listar Contatos
