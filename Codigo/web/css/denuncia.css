@@ -176,79 +176,54 @@ form #subject {
     height: 60px;
 }
 
-
 /*=======================
 	MENU
 =========================*/
 
+/* Comportamento normal Desktop */
 
-/* Somente para fins representativos de onde ficará o menu de navegação  */
+.Menu a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
 
-#side-nav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
+.cabecalho{
+    background:linear-gradient(180deg, #f3c3c3, rgba(240, 128, 128, 0) 100%) #db6d6d 43.75%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; /* se não couber quebra linha*/
+    justify-content: space-between;
     align-items: center;
-    background: linear-gradient( 329.54deg, #D95353 0%, rgba(214, 21, 79, 0.97) 100%);
+    padding: 5px;
+    margin-bottom: 20px;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+.Menu {
+    display: flex;
 }
 
-button.open-nav {
-    align-self: flex-start;
-    border: none;
-    background: none;
-    font-size: 25px;
-    cursor: pointer;
+.Menu li {
+   margin: 10px;
+   list-style: none;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 18px; 
 }
 
-a.menu-button {
-    margin-top: 40px;
-    color: #fff;
-    text-decoration: none;
-    background: #BBB3C2;
-    padding: 18px;
-    border-radius: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: "Nunito";
-    width: 220px;
-    font-size: 13px;
+/* Menu moble */
+
+.input-group{
+    max-width: 200px;
 }
 
-a.menu-button:hover {
-    text-decoration: none;
-    color: #fff;
-    box-shadow: 0 2px 12px #6a6464;
-    transition: 0.3s;
+#menu-moble{
+    display: none;
+    position: fixed;
 }
 
-a.closebtn {
-    align-self: flex-end;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    padding: 0 10px;
-    font-family: sans-serif;
+#label-menu{
+    display: none;
 }
 
-a.closebtn:hover {
-    text-decoration: none;
-    color: #fff;
-}
+/* Fim Menu moble */
 
 
 /*=======================
@@ -371,4 +346,90 @@ MEDIA QUERIES
     td {
         min-width: 250px;
     }
+}
+
+/* Menu*/
+@media screen and (max-width: 768px) {
+
+    .cabecalho{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 999; /*sobrepor*/
+    }
+ 
+    .cabecalho nav{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+    }   
+ 
+    .Menu{
+     display: flex;
+     position: fixed;
+     flex-wrap: wrap;
+     align-content: center;
+     top: 0px;
+     left: 0px;
+     width: 100%;
+     height: 0%; /* altura 0 assuma a posição incial dele, 100% ocupa toda a página*/
+     background-color: rgba(0, 0, 0, 0.7);
+     overflow: hidden;
+     -webkit-transition: height 0.3s;
+     -moz-transition: height 0.3s;
+     -ms-transition: height 0.3s;
+     -o-transition: height 0.3s;
+     transition: height 0.3s;
+    }
+ 
+    .Menu li {
+     display: block;
+     width: 100%;
+     margin-left: 0px;
+     margin-bottom: 20px;
+     z-index: 999; /*sobrepor*/
+    }
+ 
+    .Menu li a {
+       display: block;
+       text-align: center;
+       width: 100%;
+       z-index: 999; /*sobrepor*/
+     }  
+
+     #buttonPesq{
+         display: none;
+     }
+     
+     #label-menu{
+         width: 50px;
+         height: inherit; /* sem comprimento definido */
+         display: block;
+         position: absolute;
+         top: 15px; /*mandando pro topo*/
+         right: 60px; /*mandando pra direira*/
+         line-height: 60px; /*largura da linha pra descer um pouco*/
+         color: white;
+         z-index: 999; /*sobrepor*/
+     }    
+ 
+     #menu-moble:checked ~ label i:nth-child(2) {
+         display: block;
+     }
+ 
+     #menu-moble:checked ~ label i:first-child {
+         display: none;
+     }
+ 
+     #menu-moble:not(:checked) ~ label i:first-child {
+         display: block;
+     }
+ 
+     #menu-moble:not(:checked) ~ label i:nth-child(2) {
+         display: none;
+     }    
+ 
+     #menu-moble:checked ~ ul {
+         height: 100%;
+     }
 }

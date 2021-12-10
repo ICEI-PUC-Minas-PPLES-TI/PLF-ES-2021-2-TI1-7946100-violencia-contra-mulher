@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Denuncia Completa</title>
     <link rel="stylesheet" href="../css/denuncia.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
@@ -17,25 +19,37 @@
 </head>
 
 <body onload="init()">
-    <div id="side-nav">
-        <!-- Somente representativo, ainda teremos essa funcionalidade -->
-        <!-- <a href="javascript:void(0)" title="Fechar Menu" class="closebtn" onclick="closeNav()">x</a>
-        <a href="../pages/cadastro.html" class="menu-button">Cadastro</a>
-        <a href="../pages/amigos.html" class="menu-button">Adicionar Amigos</a>
-        <a href="../pages/historico.html" class="menu-button">Histórico de denúncias</a>
-        <a href="../pages/sobre.html" class="menu-button">Sobre o APP</a>
-        <a href="../index.html" class="menu-button">Início</a> -->
-    </div>
-    <div class="row">
-        <div id="msg" class="col-sm-10 offset-sm-1 ">
-            <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+
+        <nav id="navbar_top">
+            <input type="checkbox" id="menu-moble">
+            <label for="menu-moble" id="label-menu">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times-circle"></i>
+            </label>
+            <ul class="Menu">
+                <li><a href="sos.html">Denúncia rápida</a></li>
+                <li><a href="denuncia.html">Denúncia completa</a></li>
+                <li><a href="cadas_usuario.html">Cadastro de usuários</a></li>
+                <li><a href="Contatos.html">Cadastro de contatos</a></li>
+                <li><a href="mapas.html">Mapa auxiliar</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="Inicio.html">Esconder</a></li>
+            </ul>
+        </nav>
+
+        <div class="input-group pesquisa">
+            <input type="search" class="form-control rounded" placeholder="Pesquisa" aria-label="Pesquisar"
+                aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-dark" id="buttonPesq"
+                style="border-color: aliceblue; color: aliceblue;">Pesquisa</button>
         </div>
-    </div>
+
+    </header>
 
     <div class="main">
-        <button onclick="openNav()" title="Abrir Menu" class="open-nav"><i class="fas fa-bars"></i></button>
-
-
         <div class="container">
 
             <div class="content">
@@ -112,7 +126,8 @@
                         </div>
                         <div class="input-box">
                             <label class="details">Detalhes (*)</label>
-                            <textarea id="subject" name="subject" placeholder="Faça uma descrição detalhada da denuncia" required></textarea>
+                            <textarea id="subject" name="subject" placeholder="Faça uma descrição detalhada da denuncia"
+                                required></textarea>
                         </div>
 
                     </div>
@@ -188,7 +203,8 @@
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="../js/denuncia.js"></script>
     <script>
@@ -215,7 +231,7 @@
 
         function init() {
             // Adiciona funções para tratar os eventos 
-            $("#btnInsert").click(function() {
+            $("#btnInsert").click(function () {
                 // Verfica se o formulário está preenchido corretamente
                 if (!$('#denunciar')[0].checkValidity()) {
                     displayMessage("Preencha o formulário de denuncia corretamente.");
@@ -255,7 +271,7 @@
             });
 
             // Intercepta o click do botão Alterar
-            $("#btnUpdate").click(function() {
+            $("#btnUpdate").click(function () {
                 // Obtem os valores dos campos do formulário
                 let campoId = $("#inputId").val();
                 if (campoId == "") {
@@ -291,7 +307,7 @@
             });
 
             // Intercepta o click do botão Excluir
-            $("#btnDelete").click(function() {
+            $("#btnDelete").click(function () {
                 let campoId = $("#inputId").val();
                 if (campoId == "") {
                     displayMessage("Selecione uma denuncia para ser excluída.");
@@ -308,14 +324,14 @@
             });
 
             // Intercepta o click do botão Listar Contatos
-            $("#btnClear").click(function() {
+            $("#btnClear").click(function () {
                 $("#denunciar")[0].reset();
             });
 
             // Oculta a mensagem de aviso após alguns segundos
-            $('#msg').bind("DOMSubtreeModified", function() {
-                window.setTimeout(function() {
-                    $(".alert").fadeTo(500, 0).slideUp(500, function() {
+            $('#msg').bind("DOMSubtreeModified", function () {
+                window.setTimeout(function () {
+                    $(".alert").fadeTo(500, 0).slideUp(500, function () {
                         $(this).remove();
                     });
                 }, 5000);
@@ -323,7 +339,7 @@
 
 
             // Preenche o formulário quando o usuario clicar em uma linha da tabela 
-            $("#grid-denuncias").on("click", "tr", function(e) {
+            $("#grid-denuncias").on("click", "tr", function (e) {
                 let linhaDenuncia = this;
                 colunas = linhaDenuncia.querySelectorAll("td");
 

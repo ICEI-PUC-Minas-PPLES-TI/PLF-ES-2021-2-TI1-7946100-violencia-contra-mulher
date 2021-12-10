@@ -3,32 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SOS Urgente</title>
     <link rel="stylesheet" href="../css/sos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
-    <div id="side-nav">
-        <a href="javascript:void(0)" title="Fechar Menu" class="closebtn" onclick="closeNav()">x</a>
-        <a href="../pages/cadastro.html" class="menu-button">Cadastro</a>
-        <a href="../pages/amigos.html" class="menu-button">Adicionar Amigos</a>
-        <a href="../pages/historico.html" class="menu-button">Histórico de denúncias</a>
-        <a href="../pages/sobre.html" class="menu-button">Sobre o APP</a>
-        <a href="../index.html" class="menu-button">Início</a>
-    </div>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+
+        <nav id="navbar_top">
+            <input type="checkbox" id="menu-moble">
+            <label for="menu-moble" id="label-menu">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times-circle"></i>
+            </label>
+            <ul class="Menu">
+                <li><a href="sos.html">Denúncia rápida</a></li>
+                <li><a href="denuncia.html">Denúncia completa</a></li>
+                <li><a href="cadas_usuario.html">Cadastro de usuários</a></li>
+                <li><a href="Contatos.html">Cadastro de contatos</a></li>
+                <li><a href="mapas.html">Mapa auxiliar</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="Inicio.html">Esconder</a></li>
+            </ul>
+        </nav>
+
+        <div class="input-group pesquisa">
+            <input type="search" class="form-control rounded" placeholder="Pesquisa" aria-label="Pesquisar"
+                aria-describedby="search-addon" />
+            <button type="button" class="btn btn-outline-dark" id="buttonPesq"
+                style="border-color: aliceblue; color: aliceblue;">Pesquisa</button>
+        </div>
+
+    </header>
 
     <div class="main">
-        <button onclick="openNav()" title="Abrir Menu" class="open-nav"><i class="fas fa-bars"></i></button>
         <h1>SOS Urgente</h1>
 
         <a href="../pages/Contatos.html" class="btncontatos">Adicione Contatos</a>
@@ -42,14 +64,15 @@
             </p>Realize denúncias, e assim podemos mudar esta realidade.</p>
         </div>
 
-        <button onclick="goBack()" class="backward-button" title="Voltar"><i class="fas fa-arrow-circle-left"></i></i></button>
+        <button onclick="goBack()" class="backward-button" title="Voltar"><i
+                class="fas fa-arrow-circle-left"></i></i></button>
     </div>
 
     <div id="modal" class="modal" style="overflow-y: auto;">
 
         <div class="modal-content">
             <p style='color: #67bf70'>Seus contatos e a polícia foram acionados. Procure um local seguro.</p>
-            
+
             <div id="modal-contacts">
                 <b>Contatos acionados: </b>
             </div>
@@ -58,7 +81,8 @@
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="../js/sos.js"></script>
 </body>
 
