@@ -8,9 +8,13 @@
     <title>Cadastro de usuário</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="cadas_uuario.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,46 +26,232 @@
         <a href="#">Sobre</a>
     </header>
     <form id="cadastro" onsubmit="return processaForm(event)">
-    <div class="container">
-     <h1>Cadastro de usuário</h1>
-     <p id="instrucoes">Preencha todos os dados.</p>
-     <section id="s_nome">Nome:
-        <input type="text" name="nome" id="nome" required>
-    </section>
-    <section id="senhas">senha:
-        <input type="password" name="senha" id="senha" required >
-    </section>
-    <section id="s_telefone">telefone:
-        <input type="number" name="telefone" id="telefone" required>
-    </section>
-    <section id="s_cpf">CPF:
-        <input type="number" name="cpf" id="cpf" required>
-    </section>
-    <section id="s_data">Data de nascimento:
-        <input type="date" name="data" id="data" required>
-    </section>
-    <section id="s_rua">Rua e número:
-        <input type="text" name="rua" id="rua" required >
-    </section>
-    <section id="s_bairro">Bairro:
-        <input type="text" name="bairro" id="bairro" required >
-    </section>
-    <section id="s_cidade">cidade e estado:
-        <input type="text" name="cidade" id="cidade" required>
-    </section>
-    <section id="s_complemento">Complemento:
-        <input type="text" name="comple" id="comple" required>
-    </section>
+        <div class="container">
+            <h1>Cadastro de usuário</h1>
+            <p id="instrucoes">Preencha todos os dados.</p>
+            <label for="inputId">Id</label>
+                    <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+            <section id="s_nome">Nome:
+                <input type="text" name="nome" id="nome" required>
+            </section>
+            <section id="senhas">senha:
+                <input type="password" name="senha" id="senha" required>
+            </section>
+            <section id="s_telefone">telefone:
+                <input type="number" name="telefone" id="telefone" required>
+            </section>
+            <section id="s_cpf">CPF:
+                <input type="number" name="cpf" id="cpf" required>
+            </section>
+            <section id="s_data">Data de nascimento:
+                <input type="date" name="data" id="data" required>
+            </section>
+            <section id="s_rua">Rua e número:
+                <input type="text" name="rua" id="rua" required>
+            </section>
+            <section id="s_bairro">Bairro:
+                <input type="text" name="bairro" id="bairro" required>
+            </section>
+            <section id="s_cidade">cidade e estado:
+                <input type="text" name="cidade" id="cidade" required>
+            </section>
+            <section id="s_complemento">Complemento:
+                <input type="text" name="comple" id="comple" required>
+            </section>
+    </form>
+    </div>
     <div class="form-group row">
         <div class="col-sm-12">
-            <input type="submit" value="salvar" id="btnInsert">            
-            <input type="submit" value="alterar" id="btnUpdate">
-            <input type="submit" value="excluir" id="btnDelete">
-            <input type="submit" value="limpar" id="btnClear">
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <input type="submit" value="salvar" id="btnInsert">
+            <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+            <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
         </div>
     </div>
-    </form>
+</form>
+
+<div class="row">
+    <div class="col-sm-12">
+        <table id="grid-contatos" class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">dd/mm/aaaa</th>
+                    <th scope="col">rua</th>
+                    <th scope="col">bairro</th>
+                    <th scope="col">cidade</th>
+                    <th scope="col">comple</th>
+                </tr>
+            </thead>
+            <tbody id="table-contatos">
+                <tr>
+                    <td scope="row">1</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 </div>
 </body>
 <script src="cadas_usuario.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="app.js"></script>
+<script>
+    exibeContatos()
+    function exibeContatos() {
+        // Remove todas as linhas do corpo da tabela
+        $("#table-contatos").html("");
+        console.log('contato', usuarios)
+        // Popula a tabela com os registros do banco de dados
+        for (i = 0; i < usuarios.length; i++) {
+            let contato = usuarios[i];
+            $("#table-contatos").append(`<tr><td scope="row">${i}</td>
+                                                <td>${contato.nome}</td>
+                                                <td>${contato.tel}</td>
+                                                <td>${contato.cpf}</td>
+                                                <td>${contato.data}</td>
+                                                <td>${contato.rua}</td>
+                                                <td>${contato.bairro}</td>
+                                                <td>${contato.cidade}</td>
+                                                <td>${contato.comple}</td>
+                                            </tr>`);
+        }
+    }
+
+    init()
+
+    function init() {
+        // Adiciona funções para tratar os eventos 
+        $("#btnInsert").click(function () {
+            // Verfica se o formulário está preenchido corretamente
+            if (!$('#form-contato')[0].checkValidity()) {
+                displayMessage("Preencha o formulário corretamente.");
+                return;
+            }
+
+            // Obtem os valores dos campos do formulário
+            let campoNome = $("#nome").val();
+            let campoTelefone = $("#telefone").val();
+            let campoCpf = $('#cpf').val();
+            let campoData = $('#data').val();
+            let campoRua = $('#rua').val();
+            let campoBairro = $('#bairro').val();
+            let campoCidade = $("#cidade").val();
+            let campoComple = $('#comple').val();
+            let contato = {
+                nome: campoNome,
+                telefone: campoTelefone,
+                cpf: campoCpf,
+                data: campoData,
+                rua: campoRua,
+                bairro: campoBairro,
+                cidade: campoCidade,
+                comple: campoComple
+            };
+
+            insertContato(contato);
+
+            // Reexibe os contatos
+            exibeContatos();
+
+            // Limpa o formulario
+            $("#form-contato")[0].reset();
+        });
+
+        // Intercepta o click do botão Alterar
+        $("#btnUpdate").click(function () {
+            // Obtem os valores dos campos do formulário
+            let campoId = $("#inputId").val();
+            
+            if (campoId == "") {
+                displayMessage("Selecione um contato para ser alterado.");
+                return;
+            }
+            let campoNome = $("#nome").val();
+            let campoTelefone = $("#telefone").val();
+            let campoCpf = $("#cpf").val();
+            let campoData = $("#data").val();
+            let campoRua = $("#rua").val();
+            let campoBairro = $('#bairro').val();
+            let campoCidade = $('#cidade').val();
+            let campoComple = $('#comple').val();
+            let contato = {
+                nome: campoNome,
+                telefone: campoTelefone,
+                cpf: campoCpf,
+                data: campoData,
+                bairro: campoBairro,
+                cidade: campoCidade,
+                comple: campoComple
+            };
+
+            updateContato(parseInt(campoId), contato);
+
+            // Reexibe os contatos
+            exibeContatos();
+
+        });
+
+        // Intercepta o click do botão Excluir
+        $("#btnDelete").click(function () {
+            let campoId = $("#inputId").val();
+            if (campoId == "") {
+                displayMessage("Selecione um contato a ser excluído.");
+                return;
+            }
+            deleteContato(parseInt(campoId));
+
+            // Reexibe os contatos
+            exibeContatos();
+
+            // Limpa o formulario
+            $("#form-contato")[0].reset();
+        });
+
+        // Intercepta o click do botão Listar Contatos
+        $("#btnClear").click(function () {
+            $("#form-contato")[0].reset();
+        });
+
+        // Oculta a mensagem de aviso após alguns segundos
+        $('#msg').bind("DOMSubtreeModified", function () {
+            window.setTimeout(function () {
+                $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                    $(this).remove();
+                });
+            }, 5000);
+        });
+
+        // Preenche o formulário quando o usuario clicar em uma linha da tabela 
+        $("#grid-contatos").on("click", "tr", function (e) {
+            let linhaContato = this;
+            console.log(linhaContato)
+
+            colunas = linhaContato.querySelectorAll("td");
+
+            $("#inputId").val(colunas[0].innerText);
+            $("#nome").val(colunas[1].innerText);
+            $("#telefone").val(colunas[2].innerText);
+            $("#cpf").val(colunas[3].innerText);
+            $("#data").val(colunas[4].innerText);
+            $("#rua").val(colunas[5].innerText);
+            $("#bairro").val(colunas[6].innerText);
+            $("#cidade").val(colunas[7].innerText);
+            $("#comple").val(colunas[8].innerText);
+        });
+
+        exibeContatos();
+    }
+</script>
+
 </html>
