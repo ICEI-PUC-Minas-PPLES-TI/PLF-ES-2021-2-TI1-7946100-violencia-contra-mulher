@@ -35,13 +35,13 @@ function processaForm(evt) {
     if (usuarios_txt) {
         usuarios = JSON.parse(usuarios_txt)
     }
-    if (usuarios.filter(u => u.cpf === usuario.cpf).length > 0) {
+    if (usuario.cpf === usuarios.cpf) {
         window.alert("CPF JÁ CADASTRADO!")
     } else {
         usuarios.push(usuario)
         localStorage.setItem("db_usuario", JSON.stringify(usuarios))
         window.alert("Dados enviados com sucesso!");
-        window.location.href = "/login.html";
+        window.location.href = "../pages/login.html";
     }
 
 
@@ -49,18 +49,17 @@ function processaForm(evt) {
 function updateContato(id, contato) {
     console.log(id)
     console.log(usuarios)
-    // Localiza o indice do objeto a ser alterado no array a partir do seu ID
-    let index = usuarios.map((obj, index) => index)[0];
+    let index = localStorage.getItem("contato");
     console.log(index)
 
     // Altera os dados do objeto no array
-    usuarios[index].nome = contato.nome,
-        usuarios[index].tel = contato.tel,
-        usuarios[index].data = contato.data,
-        usuarios[index].cidade = contato.cidade,
-        usuarios[index].cpf = contato.cpf,
-        usuarios[index].bairro = contato.bairro,
-        usuarios[index].comple = contato.comple,
+    contato[index].nome = usuario.nome,
+        usuario[index].tel = contato.tel,
+        usuario[index].data = contato.data,
+        usuario[index].cidade = contato.cidade,
+        usuario[index].cpf = contato.cpf,
+        usuario[index].bairro = contato.bairro,
+        usuario[index].comple = contato.comple,
         usuarios[index].rua = contato.rua
 
     displayMessage("Contato alterado com sucesso");
