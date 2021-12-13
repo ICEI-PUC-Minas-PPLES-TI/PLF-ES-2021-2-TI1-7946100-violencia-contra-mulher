@@ -13,6 +13,35 @@
 
 <body onload="ListaContatos()">
 
+      <!-- Cabeçalho -->
+  <header class="cabecalho">
+
+    <nav id="navbar_top">
+      <input type="checkbox" id="menu-moble">
+      <label for="menu-moble" id="label-menu">
+        <i class="fa fa-bars"></i>
+        <i class="fa fa-times-circle"></i>
+      </label>
+      <ul class="Menu">
+        <li><a href="sos.html">Denúncia rápida</a></li>
+        <li><a href="denuncia.html">Denúncia completa</a></li>
+        <li><a href="cadas_usuario.html">Cadastro de usuários</a></li>
+        <li><a href="Contatos.html">Cadastro de contatos</a></li>
+        <li><a href="mapas.html">Mapa auxiliar</a></li>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="Inicio.html">Esconder</a></li>
+      </ul>
+    </nav>
+
+    <div class="input-group pesquisa">
+      <input type="search" class="form-control rounded" placeholder="Pesquisa" aria-label="Pesquisar"
+        aria-describedby="search-addon" />
+      <button type="button" class="btn btn-outline-dark" id="buttonPesq"
+        style="border-color: aliceblue; color: aliceblue;">Pesquisa</button>
+    </div>
+
+  </header>
+
     <div class="container">
         <div id="title">Lista de contatos</div>
         <div class="row">
