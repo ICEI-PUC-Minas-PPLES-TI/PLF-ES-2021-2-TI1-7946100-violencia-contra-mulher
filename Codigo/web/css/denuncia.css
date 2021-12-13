@@ -27,10 +27,15 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 3px;
+    height: 2px;
     width: 250px;
     border-radius: 5px;
     background: linear-gradient(135deg, #e67571, #9b59b6);
+}
+
+.container .title h3 {
+    color: brown;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -244,7 +249,7 @@ form #subject {
 .form-group .btn-form {
     align-self: flex-end;
     border: none;
-    background: #970D0D;
+    background: #dc3545;
     color: #fff;
     width: 100px;
     padding: 5px;
