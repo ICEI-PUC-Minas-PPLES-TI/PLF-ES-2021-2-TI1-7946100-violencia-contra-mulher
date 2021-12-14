@@ -59,6 +59,9 @@ form > div {
     font-family: American classic;
     font-size: large;
 }
+#inputId {
+
+}
     
 section {
     margin-left: auto;
@@ -77,10 +80,29 @@ section {
 }
 input {
     border-radius: 20px;
+    font-style: bold;
 }
 h1 {
-    color: rgb(194, 74, 74);
+    color: brown;
+    font-size: 25px;
+    font-weight: 500;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+h2#instrucoes{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+}
+#btnInsert, #btnUpdate, #btnDelete {
+    background-color: #f56488;
+    color: black;
+    border: none;
+    border-radius: 120px;
+}
+input#inputId {
+   margin-left: 50px;
+   margin-right: 50px;
 }
 
 /* Menu*/

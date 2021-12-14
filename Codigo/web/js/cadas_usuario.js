@@ -46,26 +46,21 @@ function processaForm(evt) {
 
 
 }
-function updateContato(id, contato) {
-    console.log(id)
-    console.log(usuarios)
-    let index = localStorage.getItem("contato");
-    console.log(index)
-
+function updateContato(index, contato) {
     // Altera os dados do objeto no array
-    contato[index].nome = usuario.nome,
-        usuario[index].tel = contato.tel,
-        usuario[index].data = contato.data,
-        usuario[index].cidade = contato.cidade,
-        usuario[index].cpf = contato.cpf,
-        usuario[index].bairro = contato.bairro,
-        usuario[index].comple = contato.comple,
+        usuarios[index].nome = contato.nome,
+        usuarios[index].tel = contato.tel,
+        usuarios[index].data = contato.data,
+        usuarios[index].cidade = contato.cidade,
+        usuarios[index].cpf = contato.cpf,
+        usuarios[index].bairro = contato.bairro,
+        usuarios[index].comple = contato.comple,
         usuarios[index].rua = contato.rua
-
-    displayMessage("Contato alterado com sucesso");
-
+    console.log(usuarios)
     // Atualiza os dados no Local Storage
-    localStorage.setItem('db_usuario', JSON.stringify(db));
+    localStorage.setItem('db_usuario', JSON.stringify(usuarios));
+    alert("Contato alterado com sucesso");
+    exibeContatos();
 }
 
 function deleteContato(id) {

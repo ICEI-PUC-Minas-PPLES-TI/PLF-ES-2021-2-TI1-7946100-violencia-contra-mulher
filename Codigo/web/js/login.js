@@ -19,7 +19,7 @@ function processaForm(evt) {
     if (usuariofiltrado.length == 1) {
         if (usuario.senha == usuariofiltrado[0].senha) {
             alert("usuario logado!")
-            window.location.href = "../pages/index.html";
+            window.location.href = "../index.html";
         } else {
             alert("SENHA INVALIDA")
         }

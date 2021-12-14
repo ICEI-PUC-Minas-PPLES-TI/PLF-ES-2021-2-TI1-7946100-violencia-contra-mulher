@@ -52,84 +52,86 @@
         </div>
 
     </header>
+    <main>
 
-    <form id="cadastro" onsubmit="return processaForm(event)">
-        <div class="container">
-            <h1>Cadastro de usuário</h1>
-            <p id="instrucoes">Preencha todos os dados.</p>
+        <form id="cadastro" onsubmit="return processaForm(event)">
+            <div class="container">
+                <h1>Cadastro de usuário</h1>
+                <h2 id="instrucoes">Preencha todos os dados.</h2>
+                <section id="InpuId"> ID:
+                    <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                </section>
+                <section id="s_nome">Nome:
+                    <input type="text" name="nome" id="nome" required>
+                </section>
+                <section id="senhas">senha:
+                    <input type="password" name="senha" id="senha" required>
+                </section>
+                <section id="s_telefone">telefone:
+                    <input type="number" name="telefone" id="telefone" required>
+                </section>
+                <section id="s_cpf">CPF:
+                    <input type="number" name="cpf" id="cpf" required>
+                </section>
+                <section id="s_data">Data de nascimento:
+                    <input type="date" name="data" id="data" required>
+                </section>
+                <section id="s_rua">Rua e número:
+                    <input type="text" name="rua" id="rua" required>
+                </section>
+                <section id="s_bairro">Bairro:
+                    <input type="text" name="bairro" id="bairro" required>
+                </section>
+                <section id="s_cidade">cidade e estado:
+                    <input type="text" name="cidade" id="cidade" required>
+                </section>
+                <section id="s_complemento">Complemento:
+                    <input type="text" name="comple" id="comple" required>
+                </section>
+        </form>
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <div class="form-group row">
+                    <div class="button">
+                        <input type="submit" value="salvar" id="btnInsert">
+                        <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+                        <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+                    </div>
+                </div>
+            </div>
 
-            <label for="inputId">Id</label>
-            <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
-            <section id="s_nome">Nome:
-                <input type="text" name="nome" id="nome" required>
-            </section>
-            <section id="senhas">senha:
-                <input type="password" name="senha" id="senha" required>
-            </section>
-            <section id="s_telefone">telefone:
-                <input type="number" name="telefone" id="telefone" required>
-            </section>
-            <section id="s_cpf">CPF:
-                <input type="number" name="cpf" id="cpf" required>
-            </section>
-            <section id="s_data">Data de nascimento:
-                <input type="date" name="data" id="data" required>
-            </section>
-            <section id="s_rua">Rua e número:
-                <input type="text" name="rua" id="rua" required>
-            </section>
-            <section id="s_bairro">Bairro:
-                <input type="text" name="bairro" id="bairro" required>
-            </section>
-            <section id="s_cidade">cidade e estado:
-                <input type="text" name="cidade" id="cidade" required>
-            </section>
-            <section id="s_complemento">Complemento:
-                <input type="text" name="comple" id="comple" required>
-            </section>
-    </form>
-    <div class="form-group row">
-        <div class="col-sm-12">
-            <div class="form-group row">
+            <div class="row">
                 <div class="col-sm-12">
-                    <input type="submit" value="salvar" id="btnInsert">
-                    <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
-                    <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+                    <table id="grid-contatos" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Telefone</th>
+                                <th scope="col">CPF</th>
+                                <th scope="col">dd/mm/aaaa</th>
+                                <th scope="col">rua</th>
+                                <th scope="col">bairro</th>
+                                <th scope="col">cidade</th>
+                                <th scope="col">comple</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-contatos">
+                            <tr>
+                                <td scope="row">1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <table id="grid-contatos" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Telefone</th>
-                            <th scope="col">CPF</th>
-                            <th scope="col">dd/mm/aaaa</th>
-                            <th scope="col">rua</th>
-                            <th scope="col">bairro</th>
-                            <th scope="col">cidade</th>
-                            <th scope="col">comple</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table-contatos">
-                        <tr>
-                            <td scope="row">1</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    </main>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -195,7 +197,7 @@
             let campoComple = $('#comple').val();
             let contato = {
                 nome: campoNome,
-                telefone: campoTelefone,
+                tel: campoTelefone,
                 cpf: campoCpf,
                 data: campoData,
                 rua: campoRua,
@@ -232,7 +234,8 @@
                 let campoComple = $('#comple').val();
                 let contato = {
                     nome: campoNome,
-                    telefone: campoTelefone,
+                    tel: campoTelefone,
+                    rua: campoRua,
                     cpf: campoCpf,
                     data: campoData,
                     bairro: campoBairro,
@@ -243,59 +246,59 @@
                 updateContato(parseInt(campoId), contato);
 
             }
-    });
+        });
 
-    // Intercepta o click do botão Excluir
-    $("#btnDelete").click(function () {
-        let campoId = $("#inputId").val();
-        if (campoId == "") {
-            displayMessage("Selecione um contato a ser excluído.");
-            return;
-        }
+        // Intercepta o click do botão Excluir
+        $("#btnDelete").click(function () {
+            let campoId = $("#inputId").val();
+            if (campoId == "") {
+                displayMessage("Selecione um contato a ser excluído.");
+                return;
+            }
 
-        // removo o contato
-        deleteContatoFromDb();
+            // removo o contato
+            deleteContatoFromDb();
 
-        // Reexibe os contatos
+            // Reexibe os contatos
+            exibeContatos();
+
+            // Limpa o formulario
+            // $("#form-contato")[0].reset();
+        });
+
+        // Intercepta o click do botão Listar Contatos
+        $("#btnClear").click(function () {
+            $("#form-contato")[0].reset();
+        });
+
+        // Oculta a mensagem de aviso após alguns segundos
+        $('#msg').bind("DOMSubtreeModified", function () {
+            window.setTimeout(function () {
+                $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                    $(this).remove();
+                });
+            }, 5000);
+        });
+
+        // Preenche o formulário quando o usuario clicar em uma linha da tabela 
+        $("#grid-contatos").on("click", "tr", function (e) {
+            let linhaContato = this;
+            console.log(linhaContato)
+
+            colunas = linhaContato.querySelectorAll("td");
+
+            $("#inputId").val(colunas[0].innerText);
+            $("#nome").val(colunas[1].innerText);
+            $("#telefone").val(colunas[2].innerText);
+            $("#cpf").val(colunas[3].innerText);
+            $("#data").val(colunas[4].innerText);
+            $("#rua").val(colunas[5].innerText);
+            $("#bairro").val(colunas[6].innerText);
+            $("#cidade").val(colunas[7].innerText);
+            $("#comple").val(colunas[8].innerText);
+        });
+
         exibeContatos();
-
-        // Limpa o formulario
-        // $("#form-contato")[0].reset();
-    });
-
-    // Intercepta o click do botão Listar Contatos
-    $("#btnClear").click(function () {
-        $("#form-contato")[0].reset();
-    });
-
-    // Oculta a mensagem de aviso após alguns segundos
-    $('#msg').bind("DOMSubtreeModified", function () {
-        window.setTimeout(function () {
-            $(".alert").fadeTo(500, 0).slideUp(500, function () {
-                $(this).remove();
-            });
-        }, 5000);
-    });
-
-    // Preenche o formulário quando o usuario clicar em uma linha da tabela 
-    $("#grid-contatos").on("click", "tr", function (e) {
-        let linhaContato = this;
-        console.log(linhaContato)
-
-        colunas = linhaContato.querySelectorAll("td");
-
-        $("#inputId").val(colunas[0].innerText);
-        $("#nome").val(colunas[1].innerText);
-        $("#telefone").val(colunas[2].innerText);
-        $("#cpf").val(colunas[3].innerText);
-        $("#data").val(colunas[4].innerText);
-        $("#rua").val(colunas[5].innerText);
-        $("#bairro").val(colunas[6].innerText);
-        $("#cidade").val(colunas[7].innerText);
-        $("#comple").val(colunas[8].innerText);
-    });
-
-    exibeContatos();
     }
 </script>
 </form>
