@@ -1,8 +1,8 @@
 
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=454219&assignment_repo_type=GroupAssignmentRepo)
-# Nome do projeto
+# Força Dellas
 
-O ~~nome do projeto~~ foi desenvolvido por uma equipe de universitários. O principal objetivo do projeto é desenvolver uma pesquisa em torno do assunto: **Violência contra as mulheres**, logo em seguida desenvolver uma possível solução ou melhora através de um sistema digital. O ~~nome do projeto~~ foi desenvolvido utilizando o conceito do *Design Sprint*, no qual guia o projeto de maneira inteligente e prática.
+Força Dellas é um projeto desenvolvido por uma equipe de universitários da Pontifícia Universidade Católica de Minas Gerais (PUC-MG). O principal objetivo do projeto é desenvolver uma pesquisa em torno do assunto: **Violência contra as mulheres**, logo em seguida desenvolver uma possível solução ou melhora através de um sistema digital utilizando HTML, CSS, JavaScript. O projeto Força Dellas foi desenvolvido utilizando o conceito do *Design Sprint*, no qual guia o projeto de maneira inteligente, organizada e prática.
 
 ## Alunos integrantes da equipe
 
@@ -23,7 +23,7 @@ O ~~nome do projeto~~ foi desenvolvido por uma equipe de universitários. O prin
 
  1. Instalação
 
-	A instalação do projeto poderá ser feita através de todas as plataformas seguras de gerenciamento e downloads de aplicativos de seu dispositivo móvel. A versão WEB do projeto pode ser acessada através do link: [link do projeto na versão web](#).
+	A instalação do projeto poderá ser feita através de todas as plataformas seguras de gerenciamento e downloads de aplicativos de seu dispositivo móvel. 
 
  2. Primeiro contato
 
@@ -35,7 +35,7 @@ O ~~nome do projeto~~ foi desenvolvido por uma equipe de universitários. O prin
 
  4. Permissões
 
-	Devido a complexidade e utilidade do projeto, o sistema deverá ser capaz de acessar informações externas para concluir sua finalidade. A tabela abaixo fala sobre permissões comuns de aplicativos em relação a sua necessidade no ~~nome do projeto~~  
+	Devido a complexidade e utilidade do projeto, o sistema deverá ser capaz de acessar informações externas para concluir sua finalidade. A tabela abaixo fala sobre permissões comuns de aplicativos em relação a sua necessidade no Força Dellas  
 		
 	
 | Permissões | Necessidade Final |
