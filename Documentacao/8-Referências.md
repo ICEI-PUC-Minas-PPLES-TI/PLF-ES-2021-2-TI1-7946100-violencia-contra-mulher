@@ -1,4 +1,4 @@
-# # Referências
+# Referências
 
 No início do desenvolvimento do projeto Força Dellas foi necessário buscar referências e documentos sobre o assunto, no qual nos auxiliou durante o processo de desenvolvimento. As principais referências são:
 
