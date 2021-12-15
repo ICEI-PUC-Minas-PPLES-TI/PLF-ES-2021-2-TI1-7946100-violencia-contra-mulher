@@ -1,19 +1,21 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
+`FORÇA DELLAS`  
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`CURSO`
+`ENGENHARIA DE SOFTWARE - PUC-MG`
 
-`SEMESTRE`
+`1º SEMESTRE`
 
 ## Participantes
 
 Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
+* Mayara Roque Rangel
+* Camila Mariana Silva
+* Samara Martins Ferreira
+* Bruno Gomes Ferreira
+* Marco Antônio Miranda Ferreira
+* Pedro Henrique Pessoa Cruz
 
 # Estrutura do Documento
 
