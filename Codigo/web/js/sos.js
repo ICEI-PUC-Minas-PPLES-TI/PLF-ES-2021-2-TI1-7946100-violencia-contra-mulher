@@ -1,3 +1,17 @@
+window.onload = () => {
+
+    $(document).ready(function() {
+        var referrer =  document.referrer;
+
+    if (referrer.includes('index.html', 0)){
+       $("#navbar_top").hide();
+    }
+    else{  
+        $("#navbar_top").show();   
+    }
+});
+}
+
 function openNav() {
     document.getElementById("side-nav").style.width = "250px";
 }
@@ -9,6 +23,7 @@ function closeNav() {
 function goBack() {
     window.history.back();
 }
+
 
 function openModal() {
     $("#modal").show();
