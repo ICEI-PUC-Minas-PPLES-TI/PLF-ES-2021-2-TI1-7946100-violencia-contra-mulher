@@ -1,0 +1,35 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Força Dellas
+authors:
+  - family-names: Roque Rangel
+    given-names: Mayara 
+  - family-names: Silva
+    given-names: Camila Mariana   
+  - family-names: Martins Ferreira
+    given-names: Samara  
+  - family-names: Gomes Ferreira
+    given-names: Bruno  
+  - family-names: Miranda Ferreira 
+    given-names: Marco Antônio 
+  - family-names: Pessoa Cruz
+    given-names: Pedro Henrique 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Assis Valentim
+    given-names: Nathalia   
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vieira Carneiro
+    given-names: Rommel 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Alves Nogueira
+    given-names: Simone  
+keywords:
+  - Violência
+  - Mulheres
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7946100-violencia-contra-mulher
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2021-12-22
